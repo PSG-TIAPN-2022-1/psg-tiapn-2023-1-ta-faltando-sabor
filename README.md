@@ -5,7 +5,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * Vitor Hugo Sorrentino Reis
 * Pedro Henrique Ramalho De Castro
-* Nome completo do aluno 3
+* Diego Alan de Aguiar Gonçalves
 * Nome completo do aluno 4
 
 ## Professores responsáveis
