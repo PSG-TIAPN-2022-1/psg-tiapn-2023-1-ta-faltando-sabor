@@ -1,5 +1,5 @@
-# Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+# Ta Faltando Sabor
+O objetivo geral deste trabalho é a criação de um portal de procura por receitas, a fim de otimizar o tempo do usuário. O produto a ser criado pretende solucionar o problema da falta de tempo para buscar pratos a serem preparados para refeições domésticas. Para tal, a aplicação a ser desenvolvida oferecerá funções de procura, armazenamento e compartilhamento de receitas tendo como base ingredientes que o usuário afirmar ter. .
 
 ## Alunos integrantes da equipe
 
@@ -10,8 +10,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
