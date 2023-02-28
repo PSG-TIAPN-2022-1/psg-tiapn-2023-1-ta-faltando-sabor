@@ -1,5 +1,5 @@
 # Ta Faltando Sabor
-O objetivo geral deste trabalho é a criação de um portal de procura por receitas, a fim de otimizar o tempo do usuário. O produto a ser criado pretende solucionar o problema da falta de tempo para buscar pratos a serem preparados para refeições domésticas. Para tal, a aplicação a ser desenvolvida oferecerá funções de procura, armazenamento e compartilhamento de receitas tendo como base ingredientes que o usuário afirmar ter. .
+O objetivo geral deste trabalho é a criação de um portal de procura por receitas, a fim de otimizar o tempo do usuário. O produto a ser criado pretende solucionar o problema da falta de tempo para buscar pratos a serem preparados para refeições domésticas. Para tal, a aplicação a ser desenvolvida oferecerá funções de procura, armazenamento e compartilhamento de receitas tendo como base ingredientes que o usuário afirmar ter.
 
 ## Alunos integrantes da equipe
 
