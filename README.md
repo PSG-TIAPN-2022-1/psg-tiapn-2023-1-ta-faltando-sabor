@@ -6,7 +6,7 @@ O objetivo geral deste trabalho é a criação de um portal de procura por recei
 * Vitor Hugo Sorrentino Reis
 * Pedro Henrique Ramalho De Castro
 * Diego Alan de Aguiar Gonçalves
-* Nome completo do aluno 4
+* Estael Gomes Ferreira de Medeiros
 
 ## Professores responsáveis
 
