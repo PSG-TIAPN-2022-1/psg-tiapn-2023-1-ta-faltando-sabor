@@ -1,21 +1,19 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Tá Faltando Sabor
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Trabalho Interdisciplinar - Aplicações para Processos de Negócios
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+Duane Henrique Alves de Carvalho e Silva
+Diego Alan de Aguiar Gonçalves
+Estael Medeiros 
+Pedro Ramalho
+Vitor Hugo Sorrentino Reis 
 
 # Estrutura do Documento
 
@@ -52,340 +50,247 @@
 - [Referências](#referências)
 
 
-# Introdução
-
-## Problema
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
-## Objetivos
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
-## Justificativa
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
-
-## Público-Alvo
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
-# Especificações do Projeto
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
-
-## Personas e Mapas de Empatia
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
+Introdução
+Com o estilo de vida agitado dos dias de hoje, muitas vezes é difícil encontrar tempo para planejar e preparar uma refeição saudável e deliciosa. Além disso, quando chega o momento de preparar uma refeição, pode não se saber o que cozinhar com os ingredientes disponíveis em sua geladeira. É nesse ponto que um sistema de culinária que facilite a escolha de receitas baseadas em ingredientes disponíveis pode ser extremamente útil.
+Problema
+A aplicação proposta neste projeto busca facilitar a procura de receitas de acordo com os ingredientes disponíveis em sua residência, poupando tempo de cozinha, compra e pesquisa.
+Objetivos
+O objetivo geral deste trabalho é a criação de um portal de procura por receitas, a fim de otimizar o tempo do usuário. O produto a ser criado pretende solucionar o problema da falta de tempo para buscar pratos a serem preparados para refeições domésticas. Para tal, a aplicação a ser desenvolvida oferecerá funções de procura, armazenamento e compartilhamento de receitas tendo como base ingredientes que o usuário afirmar ter. 
 
-
-## Histórias de Usuários
-
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-
-## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
-
-### Requisitos Funcionais
-
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
-
-### Requisitos não Funcionais
-
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-> 
-> **Links Úteis**:
-> 
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-
-# Projeto de Interface
-
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
-
-## User Flow
-
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
-> ![Exemplo de UserFlow](images/userflow.jpg)
-
-
-## Wireframes
-
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
-
-
-# Metodologia
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
-## Divisão de Papéis
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-
-
-## Ferramentas
-
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
-
-| Ambiente  | Plataforma              |Link de Acesso |
-|-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
-
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
-
-## Controle de Versão
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
-> A ferramenta de controle de versão adotada no projeto foi o
-> [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-> foi utilizado para hospedagem do repositório `upstream`.
-> 
-> O projeto segue a seguinte convenção para o nome de branchs:
-> 
-> - `master`: versão estável já testada do software
-> - `unstable`: versão já testada do software, porém instável
-> - `testing`: versão em testes do software
-> - `dev`: versão de desenvolvimento do software
-> 
-> Quanto à gerência de issues, o projeto adota a seguinte convenção para
-> etiquetas:
-> 
-> - `bugfix`: uma funcionalidade encontra-se com problemas
-> - `enhancement`: uma funcionalidade precisa ser melhorada
-> - `feature`: uma nova funcionalidade precisa ser introduzida
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
->
-> **Exemplo - GitHub Feature Branch Workflow**:
->
-> ![Exemplo de Wireframe](images/Github-Workflow.png)
-
-# **############## SPRINT 1 ACABA AQUI #############**
+Como objetivos específicos, podemos ressaltar:
+Fornecer meios de pesquisa com base nos ingredientes disponíveis ao usuário;
+Oferecer um catálogo de receitas organizados pela preferência do usuário, facilitando sua procura;
+Possibilitar que o usuário arquive suas receitas favoritas;
+Permitir que usuários cadastrem suas próprias receitas no site;
+Proporcionar formas de coletar informações dos usuários para criação de um banco de dados.
+Justificativa
+O projeto de um sistema de culinária que facilite a escolha de receitas com base nos ingredientes disponíveis na geladeira de uma pessoa tem uma grande relevância prática para a vida cotidiana das pessoas. Com a correria do dia a dia, muitas vezes acaba-se esquecendo ou não sabendo quais ingredientes estão disponíveis em casa, o que pode acabar resultando em desperdício de alimentos e dinheiro. Além disso, pode ser desafiador escolher uma receita que utilize apenas os ingredientes disponíveis na geladeira, levando a escolhas inadequadas ou até mesmo ao descarte de alimentos que poderiam ser aproveitados.
+
+Um sistema de culinária que leve em conta os ingredientes disponíveis na geladeira de uma pessoa pode ajudar a solucionar esses problemas e simplificar o processo de escolha de receitas. Ao registrar os ingredientes disponíveis, o sistema poderá sugerir receitas que utilizem esses ingredientes e evitar o desperdício de alimentos, além da economia de tempo gasto na busca por receitas. O sistema pode também oferecer opções de receitas personalizadas, levando em conta as preferências dos usuários e sugerindo variações nas receitas com base nos ingredientes disponíveis.
+Por fim, este sistema pode ser uma solução prática e acessível para ajudar as pessoas a planejar melhor suas refeições e reduzir o desperdício de recursos, tanto alimentos quanto dinheiro e tempo. Com a facilidade de acesso a receitas e a possibilidade de personalização, é possível tornar o processo de cozinhar mais eficiente e agradável, trazendo benefícios para o bolso dos usuários.
+Público-alvo
+Por se tratar de uma ferramenta destinada a pessoas que não cozinham com frequência, estima-se que o público dela seja jovens. Sendo assim,  esta solução seria direcionada a homens e mulheres entre 18 e 30 anos. Entende-se que a portal a ser desenvolvido poderia também ser estendida a outras faixas etárias posteriormente, mas, como parte de um escopo inicial, optou-se por direcionar o produto a jovens adultos, visto que este público possivelmente seria mais habituado a  soluções deste tipo. Outro fator seria considerar que, dentro desse grupo, o foco seria atingir pessoas que moram sozinhas ou dividem com amigos e parceiros, sendo, então, para donos de casa jovens que, com a falta de tempo do dia-a-dia, não cozinhariam diariamente.
+Especificação do Projeto
+Para alcançar uma definição mais concreta do problema, foi feito um mapeamento das prováveis partes interessadas em utilizar a solução proposta neste trabalho. Assim, foi possível compreender as motivações e limitações dos diferentes grupos que este projeto pretende atingir. As informações levantadas nessa atividade culminaram na criação de personas que servirão de norte para o desenvolvimento do produto.
+
+As personas desenvolvidas para este trabalho foram condensadas em três perfis. Foi considerado que, dentro da faixa etária definida e tendo em vista o estilo de vida pressuposto para o público-alvo, estariam estudantes, assalariados e aqueles que trabalham e estudam simultaneamente. Cada uma dessas pessoas teria objetivos distintos para o uso da ferramenta e, consequentemente, também apresentaria restrições e repulsas a determinados aspectos dela, sendo necessário  evitá-las para seu bom resultado como produto.
+Personas
+As personas definidas para o projeto são as explicitadas a seguir.
+
+
+Luiz
+IDADE: 20
+OCUPAÇÃO: Estudante
+
+
+
+OBJETOS E LUGARES: Tem costume de usar o celular constantemente.
+
+
+OBJETIVOS CHAVE:
+Preocupa-se com o seu orçamento e não estourar o valor que tem destinado mensalmente para suas despesas.
+
+
+COMO DEVEMOS TRATÁ-LO?
+Como usuário, gostaria que a aplicação fornecesse soluções simples e baratas para sua alimentação.
+NUNCA DEVEMOS:
+Não se sentiria incentivado a utilizar a ferramenta se as receitas o fizessem comprar ingredientes demais.
+
+
+
+
+
+Roberta
+IDADE: 28
+OCUPAÇÃO: Assalariada
+
+
+
+
+OBJETOS E LUGARES: Tem costume de usar o celular, mas apenas fora do trabalho.
+
+
+OBJETIVOS CHAVE:
+Pela rotina de trabalho, utilizaria a ferramenta como forma de ganhar tempo e poupar momentos em casa para descansar.
+
+
+COMO DEVEMOS TRATÁ-LA?
+Como usuária, faria questão que a aplicação apresentasse soluções rápidas e que a busca por receitas não a fizesse perder tempo.
+NUNCA DEVEMOS:
+Não se sentiria incentivada a usar a plataforma se ela, em vez de economizar seu tempo, a fizesse gastar mais procurando boas receitas e comprando os ingredientes indicados que cozinhando pratos sugeridos por outros sites.
+
+
+
+
+
+
+
+Paulo
+IDADE: 24
+OCUPAÇÃO: Estudante e assalariado
+
+
+
+OBJETOS E LUGARES: Não utiliza tanto seu telefone, em função da rotina apertada. Utiliza o aparelho para comunicação para caso haja algum imprevisto ou precise de um fim específico.
+OBJETIVOS CHAVE:
+Uma aplicação de busca por receitas seria uma ótima ajuda para ele, pois sua rotina de trabalho e estudos não permite que faça pratos elaborados e que gastem muito.
+
+
+COMO DEVEMOS TRATÁ-LO?
+Sentiria-se bem se pudesse ter uma utilização muito simples rápida da aplicação, de forma que ela entregasse receitas com um nível moderado de complexidade e custo com poucos cliques.
+NUNCA DEVEMOS:
+Tornar a experiência de uso da ferramenta demorada e maçante, para que ele não perca o interesse e opte por outro site semelhante.
+
+
+
+
+
+Requisitos do Projeto
+Através da concepção inicial do escopo funcional do projeto é possível visualizar e projetar a trajetória do desenvolvimento do produto. Este é definido por meio dos requisitos funcionais e não-funcionais, que descrevem o que deve ser desenvolvido pela equipe. Essas tarefas especificam funcionalidades do sistema, assim como potenciais limitações. Estes requisitos estão descritos a seguir.
+Requisitos Funcionais
+A tabela a seguir detalha os requisitos definidos para o projeto, especificando a prioridade em que devem ser produzidos.
+
+ID
+Descrição
+Prioridade
+RF-01
+O sistema deve permitir ao usuário registrar os ingredientes disponíveis na sua geladeira, para que possa mostrar as receitas disponíveis com base nesses ingredientes. 
+Essencial
+RF-02
+O sistema deve ter um banco de dados de receitas que possa ser consultado para encontrar receitas que possam ser feitas com os ingredientes registrados. 
+Essencial
+RF-03
+O sistema deve ter um filtro de receitas que possa ser usado para restringir as receitas mostradas com base em fatores como tempo de preparo, tipo de cozinha, nível de dificuldade, etc. 
+Importante
+RF-04
+O sistema pode gerar uma lista de compras com base nas receitas selecionadas, para que o usuário possa comprar os ingredientes necessários. 
+Importante
+RF-05
+O sistema deve fornecer instruções claras sobre como preparar cada receita, incluindo quantidades, tempo de cozimento, temperaturas e outras informações relevantes.
+Essencial
+RF-06
+O sistema pode permitir que os usuários avaliem as receitas e forneçam feedback sobre a facilidade de preparo, sabor e outras características.
+Importante
+RF-07
+O sistema pode permitir que os usuários compartilhem receitas com outros usuários ou em redes sociais, tornando-o uma plataforma de comunidade para entusiastas de culinária.
+Desejável
+RF-08
+O sistema pode sugerir variações nas receitas com base nos ingredientes disponíveis e permitir que os usuários personalizem as receitas de acordo com suas preferências. 
+Desejável
+
+
+Requisitos não-funcionais
+A tabela a seguir apresenta os requisitos não-funcionais que o projeto deverá atender.
+
+ID
+Descrição
+Prioridade
+RNF-01
+O sistema deve ser fácil de usar, com uma interface intuitiva e navegação clara, para que os usuários possam encontrar rapidamente as informações que precisam.
+Essencial
+RNF-02
+O sistema deve ser confiável e estável, para que os usuários possam contar com ele para fornecer receitas precisas e úteis sempre que precisarem.
+Essencial
+RNF-03
+O sistema deve ser rápido e responsivo, para que os usuários possam obter as informações que precisam sem esperar muito tempo.
+Importante
+RNF-04
+O sistema deve proteger as informações dos usuários, como dados de login, preferências e receitas pessoais, para que não sejam acessados por pessoas não autorizadas.
+Importante
+RNF-05
+O sistema deve ser capaz de lidar com um grande número de usuários e receitas, sem comprometer a qualidade ou o desempenho.
+Desejável
+RNF-06
+O sistema deve ser projetado para ser executado em diferentes plataformas, como desktops, tablets e dispositivos móveis, para que os usuários possam acessá-lo em qualquer lugar. 
+Desejável
+RNF-07
+O sistema deve suportar vários idiomas e formatos de data, para que possa ser usado por usuários de todo o mundo.
+Desejável
+RNF-08
+O sistema deve ser projetado para ser acessível a pessoas com deficiências, como usuários com problemas de visão ou mobilidade reduzida.
+Desejável
+
+
+
+Restrições
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
+
+ID
+Descrição
+RE-01
+O projeto deverá ser entregue no final do semestre letivo.
+RE-02
+O aplicativo deve se restringir às tecnologias básicas da Web no Frontend e Backend.
+RE-03
+A equipe não pode subcontratar o desenvolvimento do trabalho.
+
+
+Metodologia
+A metodologia contempla as definições de ferramentas utilizadas pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
+Relação de Ambientes de Trabalho
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue. 
+
+Ambiente
+Plataforma
+Link de Acesso
+Repositório de código fonte e documentos do projeto
+GitHub
+https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2023-1-ta-faltando-sabor
+Projeto de Interface e  Wireframes
+Figma
+https://www.figma.com/ 
+
+Gerenciamento do Projeto
+A equipe deste projeto utiliza metodologias ágeis, tendo o Scrum como cerne do processo de desenvolvimento.
+
+A equipe está organizada da seguinte maneira:
+Scrum Master: Duane Henrique Alves de Carvalho e Silva
+Product Owner: Leonardo Vilela Cardoso
+Equipe de Desenvolvimento: 
+Estael Medeiros (Desenvolvedor Front End)
+Pedro Ramalho (Desenvolvedor Front End)
+Vitor Hugo Sorrentino Reis (Desenvolvedor Back End)
+Diego Alan de Aguiar Gonçalves (Desenvolvedor Back End)
+
+
+Projeto de Interface
+Para a montagem da interface do sistema, a acessibilidade e usabilidade foram os focos para a estruturação da aplicação. Desta forma, foi idealizado um fluxo de telas simples que deixasse o usuário confortável e que priorizasse o controle deste de suas informações.
+Fluxo do Usuário
+A figura a seguir apresenta o fluxo de utilização do sistema através das telas do sistema. As telas são detalhadas a seguir, com suas interações demonstradas com ícones que indicam a sequência percorrida pelo usuário. 
+
+
+Figura 2 - Fluxo de telas do usuário
+
+Todo percurso pelo sistema inicia-se pela página inicial e direciona o usuário para as suas funções. Através dela é possível efetuar login em sua conta e, caso ainda não a tenha ainda, cadastrar-se para então poder utilizar o portal. Pela primeira tela também é permitido ao visitante acessar a tela de cadastro de receitas próprias, mas suas funcionalidades somente estarão disponíveis após o login, esta interação servirá como um incentivo para que um novo acessante com interesse no produto efetue seu cadastro e passe a usar a ferramenta.
+
+Wireframes
+Conforme o fluxo de telas do projeto descrito anteriormente, as telas do sistema são demonstradas em detalhes nos itens que se seguem. As telas do sistema apresentadas foram concebidas seguindo uma estrutura simples e considerando dois possíveis caminhos: um para o usuário já cadastrado na plataforma e outro de um novo usuário.
+
+Para a criação dos wireframes, foi considerado que todas as telas teriam uma mesma navbar. Por trata-se de um elemento que repetiria em todo o site, ela não foi incluída na nos moldes descritos nesta seção.
+
+Tela - Login
+A tela de login contém um espaço para o e-mail, senha, além de uma seta redirecionando a página principal.
+
+
+Tela - Cadastro de pessoas
+A seguir vê-se a tela que o usuário conseguirá colocar seus dados no site, para ter benefícios dentro do mesmo.
+
+Tela - Principal
+A tela principal contém o redirecionamento da seção responsável pela pesquisa de receitas com base nos ingredientes disponíveis ao usuário. Nela há também sugestões aleatórias.
+
+
+Tela - Cadastro de receitas
+A tela de cadastro requer informações como descrição, nome da receita, modo de fazer… para que assim seja feito o cadastro das receitas, juntamente com um espaço para que sejam anexadas as fotos de tal.
+
+
+
+Tela - Menu
+Na tela menu o usuário informa os ingredientes disponíveis em sua casa e o que deseja em sua receita. Logo, aparecerá a lista de receitas que corresponde aos ingredientes escolhidos e ao seu filtro. 
+
+
+
+Tela - Perfil
+A tela de perfil será composta com a foto do usuário, o seu nome, idade e e-mail informado no cadastro, além das receitas favoritadas por tal. 
 
 
 # Projeto da Solução
