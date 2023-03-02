@@ -247,10 +247,11 @@ A equipe está organizada da seguinte maneira:
 Scrum Master: Duane Henrique Alves de Carvalho e Silva
 Product Owner: Leonardo Vilela Cardoso
 Equipe de Desenvolvimento: 
-Estael Medeiros (Desenvolvedor Front End)
-Pedro Ramalho (Desenvolvedor Front End)
-Vitor Hugo Sorrentino Reis (Desenvolvedor Back End)
-Diego Alan de Aguiar Gonçalves (Desenvolvedor Back End)
+Estael Medeiros (Desenvolvedor Front End e UI/UX)
+Pedro Ramalho (Desenvolvedor Front End e UI/UX)
+Duane Henrique Alves de Carvalho e Silva (Desenvolvedor Full Stack)
+Vitor Hugo Sorrentino Reis (Desenvolvedor Back End/ Banco de Dados)
+Diego Alan de Aguiar Gonçalves (Desenvolvedor Back End/Banco de Dados)
 
 
 Projeto de Interface
