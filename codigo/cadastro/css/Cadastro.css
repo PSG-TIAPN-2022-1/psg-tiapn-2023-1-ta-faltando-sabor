@@ -40,35 +40,35 @@ body {
   display: flex;
 }
 
-.cadastro{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #333333;
-	padding: 2%;
-	margin-top: 4%;
-	border-radius: 10px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333333;
+  padding: 2%;
+  margin-top: 4%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   width: 80%;
-	max-width: 500px;
+  max-width: 500px;
   text-align: center;
   height: auto;
   max-height: 800px;
   min-height: auto;
-  transform: translateY(-3%);
+  transform: translateY(-4.5%);
 }
 
 .cadastro h1 {
-	color: white;
-	margin-bottom: 5%;
+  color: white;
+  margin-bottom: 5%;
   text-align: center;
   max-width: 100%;
   margin: auto;
 }
 
 .cadastro label {
-	color: white;
-	font-size: 1rem;
+  color: white;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -77,26 +77,25 @@ body {
 }
 
 .cadastro input {
-	padding: 2%;
-	border: none;
-	border-radius: 5px;
-	margin-bottom: 5%;
-	width: 96%;
+  padding: 2%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  width: 96%;
   background-color: #e6e6e6;
   padding-bottom: 20px;
   margin-top: 5px;
 }
 
-
 .cadastro button {
-	background-color: black;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	padding: 2%;
-	cursor: pointer;
-	font-size: 16px;
-	transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
   margin-top: 5%;
   margin: auto;
   width: 100%;
@@ -104,8 +103,8 @@ body {
 }
 
 .cadastro button:hover {
-	background-color: red;
-	color: white;
+  background-color: red;
+  color: white;
 }
 
 .footer {
@@ -124,12 +123,25 @@ body {
   height: 70px;
 }
 
+.cadastro .login-link {
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transform: translateY(-10px);
+}
+
+.cadastro .login-link:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .cadastro {
     width: 90%;
     max-width: none;
   }
-  
+
   .cadastro button {
     width: 100%;
   }
