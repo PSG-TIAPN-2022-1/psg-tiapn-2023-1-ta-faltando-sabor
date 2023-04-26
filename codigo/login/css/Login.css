@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/img/sabor.png');
+  background-image: url("/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/img/sabor.png");
   background-size: 1920px 1080px;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,72 +40,71 @@ body {
   display: flex;
 }
 
-.cadastro{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #333333;
-	padding: 2%;
-	margin-top: 4%;
-	border-radius: 10px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333333;
+  padding: 2%;
+  margin-top: 11%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   width: 80%;
-	max-width: 500px;
+  max-width: 500px;
   text-align: center;
   height: auto;
   max-height: 800px;
   min-height: auto;
-  transform: translateY(-3%);
+  transform: translateY(-12%);
 }
 
-.cadastro h1 {
-	color: white;
-	margin-bottom: 5%;
+.login h1 {
+  color: white;
+  margin-bottom: 2%;
   text-align: center;
   max-width: 100%;
-  margin: auto;
+  margin-top: 2%;
 }
 
-.cadastro label {
-	color: white;
-	font-size: 1rem;
+.login label {
+  color: white;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 2%;
+  padding-top: 1%;
   padding-bottom: 1%;
 }
 
-.cadastro input {
-	padding: 2%;
-	border: none;
-	border-radius: 5px;
-	margin-bottom: 5%;
-	width: 96%;
+.login input {
+  padding: 2%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  width: 96%;
   background-color: #e6e6e6;
   padding-bottom: 20px;
   margin-top: 5px;
 }
 
-
-.cadastro button {
-	background-color: black;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	padding: 2%;
-	cursor: pointer;
-	font-size: 16px;
-	transition: all 0.3s ease-in-out;
+.login button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
   margin-top: 5%;
-  margin: auto;
+  margin-bottom: 2%;
   width: 100%;
   height: 3rem;
 }
 
-.cadastro button:hover {
-	background-color: red;
-	color: white;
+.login button:hover {
+  background-color: red;
+  color: white;
 }
 
 .footer {
@@ -124,12 +123,24 @@ body {
   height: 70px;
 }
 
+.login .cadastro-link {
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login .cadastro-link:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .cadastro {
     width: 90%;
     max-width: none;
   }
-  
+
   .cadastro button {
     width: 100%;
   }
