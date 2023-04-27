@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: #e66c2f;
   padding: 10px 20px;
   width: 100%;
   position: fixed;
@@ -103,7 +103,7 @@ body {
 }
 
 .login button:hover {
-  background-color: red;
+  background-color: #e66c2f;
   color: white;
 }
 
@@ -112,7 +112,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: #e66c2f;
   color: white;
   text-align: center;
   padding: 20px 5px;
