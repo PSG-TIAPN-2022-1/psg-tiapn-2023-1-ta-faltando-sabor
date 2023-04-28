@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/codigo/login/img/sabor.png');
+  background-image: url('https://paribar.com.br/wp-content/uploads/2021/04/comida-brasileira.jpg');
   background-size: 1920px 1080px;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,8 +15,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e66c2f;
-  padding: 10px 20px;
+  background-color: rgb(230, 108, 47, 0.9);
+  padding: 20px 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -55,7 +55,8 @@ body {
   height: auto;
   max-height: 800px;
   min-height: auto;
-  transform: translateY(-2%);
+  transform: translateY(-4%);
+  opacity: 0.9;
 }
 
 
@@ -118,7 +119,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #e66c2f;
+  background-color: rgb(230, 108, 47, 0.9);
   color: white;
   text-align: center;
   padding: 20px 5px;
