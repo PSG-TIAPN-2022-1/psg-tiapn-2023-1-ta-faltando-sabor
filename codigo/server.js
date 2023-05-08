@@ -1,8 +1,22 @@
 const express = require('express');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(function(req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Credentials", true);
+    next();
+});
+
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -31,16 +45,23 @@ app.get('/usuario', (req, res) => {
 });
 
 app.post('/usuario', (req, res) => {
-    const data = res.body;
-    connection.query('INSERT INTO usuario (usuario.email, usuario.nome, usuario.idade, usuario.password) VALUES (?,?,?,?)', [data], (err,rows,fields) => {
+    console.log(req.body);
+    const { email, nome, idade, senha } = req.body;
+    connection.query(
+      'INSERT INTO usuario (email, nome, idade, senha) VALUES (?, ?, ?, ?)',
+      [email, nome, idade, senha],
+      (err, result) => {
         if (err) {
-            console.log("Erro ao executar consulta!");
-            return;
+          console.log("Erro ao executar consulta!");
+          console.log(err);
+          return;
         }
-        res.json({message: 'Cadastro realizado!'});
-    });
-});
+        res.json({ message: 'Cadastro realizado!' });
+      }
+    );
+  });
 
-app.listen(port,() => {
+
+app.listen(port, '0.0.0.0', () => {
     console.log("Conexão estabelecida!" + port);
 })
