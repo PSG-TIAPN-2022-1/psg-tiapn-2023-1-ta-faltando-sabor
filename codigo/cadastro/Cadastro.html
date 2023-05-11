@@ -27,8 +27,12 @@
 		<label for="email">E-mail:</label>
 		<input type="email" id="email" name="email" required>
 		<label for="senha">Senha:</label>
-		<input type="password" id="senha" name="senha" required>
-        <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html" class="login-link">Já é cadastrado? Login</a>
+		<div class="input-container">
+            <input type="password" id="senha" name="senha" required>
+            <i class="toggle-password" onclick="togglePasswordVisibility()">👁️</i>
+        </div>
+        <a style="color: black;" href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html" class="login-link">Já é cadastrado? Login</a>
+        <div id="mensagem"></div>
 		<button type="button" onclick="cadastrar()">Cadastrar</button>
 	</form>
 

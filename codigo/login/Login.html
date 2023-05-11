@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/css/Login.css">
     <script type="text/javascript" src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Tela de Login</title>
 </head>
 <body>
@@ -18,14 +19,19 @@
     </nav>
 
     <form class="login">
-		<h1>Login</h1>
-		<label for="email">E-mail:</label>
-		<input type="email" id="email" name="email" required>
-		<label for="senha">Senha:</label>
-		<input type="password" id="senha" name="senha" required>
+        <h1>Login</h1>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="senha">Senha:</label>
+        <div class="input-container">
+            <input type="password" id="senha" name="senha" required>
+            <i class="toggle-password" onclick="togglePasswordVisibility()">👁️</i>
+        </div>
         <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/Cadastro.html" class="cadastro-link">Ainda não tem login? Cadastre-se</a>
-		<button type="button" onclick="login()">Entrar</button>
-	</form>
+        <div id="mensagem"></div>
+        <button type="button" onclick="login()">Entrar</button>
+    </form>
+    
 
     <div class="footer">
         <p> © Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>

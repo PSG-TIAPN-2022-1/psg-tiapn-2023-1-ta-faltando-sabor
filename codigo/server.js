@@ -35,14 +35,16 @@ connection.connect((err) => {
 });
 
 app.get('/usuario', (req, res) => {
-    connection.query('SELECT * FROM usuario', (err,rows,fields) => {
-        if (err) {
-            console.log("Erro ao executar consulta!");
-            return;
-        }
-        res.json(rows);
-    });
+  connection.query('SELECT * FROM usuario', (err,rows,fields) => {
+      if (err) {
+          console.log("Erro ao executar consulta!");
+          return;
+      }
+      res.json(rows);
+  });
 });
+
+  
 
 app.post('/usuario', (req, res) => {
     console.log(req.body);

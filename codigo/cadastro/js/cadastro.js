@@ -1,11 +1,10 @@
-function cadastrar()
-{
-    var nome = document.getElementById("nome").value;
-    var idade = document.getElementById("idade").value;
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-    
-    /* Codigo pra validar email e tambem pra verificar a força da senha (Será implementado depois)
+function cadastrar() {
+  const nome = document.getElementById("nome").value;
+  const idade = document.getElementById("idade").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  /* Codigo pra validar email e tambem pra verificar a força da senha (Será implementado depois)
     function validarEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
@@ -26,25 +25,44 @@ function cadastrar()
         return;
     }
     */
-    
 
-    if (nome === "" || idade === "" || email === "" || senha === "")
-    {
-        return window.alert("Preencha todos os campos!");
+  if (nome === "" || idade === "" || email === "" || senha === "") {
+    return window.alert("Preencha todos os campos!");
+  }
+
+  const values = {
+    email: email,
+    nome: nome,
+    idade: idade,
+    senha: senha,
+  };
+
+
+  console.log("Enviando requisição de cadastro...");
+
+
+  axios.post("http://localhost:3000/usuario", values)
+  .then((result) => {
+    const mensagem = document.getElementById("mensagem");
+    mensagem.textContent = "Cadastro realizado com sucesso!";
+    mensagem.classList.add("mensagem-sucesso");
+  })
+  .catch((error) => {
+    if (error.response && error.response.status === 409) {
+      const mensagem = document.getElementById("mensagem");
+      mensagem.textContent = "Erro! Usuário já cadastrado!";
+      mensagem.classList.remove("mensagem-sucesso");
+      mensagem.classList.add("mensagem-erro");
+    } else {
+      console.log(error);
     }
-
-    const values = {
-        email: email,
-        nome: nome,
-        idade: idade,
-        senha: senha
-    };
+  });
+}
 
 
-    axios.post('http://localhost:3000/usuario', values).then((result) => {
-        console.log(result);
-        
-    }).catch((err) => {
-        console.log(err);   
-    });
+function togglePasswordVisibility() {
+  const senhaInput = document.getElementById("senha");
+  const type =
+    senhaInput.getAttribute("type") === "password" ? "text" : "password";
+  senhaInput.setAttribute("type", type);
 }
