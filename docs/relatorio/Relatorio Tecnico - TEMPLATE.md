@@ -296,36 +296,45 @@ A tela de perfil será composta com a foto do usuário, o seu nome, idade e e-ma
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para o bom desenvolvimento da plataforma proposta, foi preciso planejar e estruturar o projeto, de forma a definir corretamente a estratégia e a arquitetura a serem adotadas. Nesta seção, são apresentadas as escolhas e justificativas relacionadas às tecnologias utilizadas, levando em consideração critérios como desempenho e adequação à solução. Além disso, são abordadas as interações entre os componentes do sistema e o banco de dados, fornecendo uma visão geral do projeto. Essas informações são essenciais para compreender o funcionamento da aplicação desenvolvida, sendo base para as etapas de implementação do trabalho.
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Os recursos tecnológicos empregados no desenvolvimento da plataforma web serão apresentados a seguir. A escolha das tecnologias teve como base em critérios como compatibilidade, desempenho e segurança.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+**Linguagens** 
+HTML, CSS, JavaScript, SQL
+**Bibliotecas** 
+React, Bootstrap
+**Gerenciamento do Projeto**
+Trello
+**Edição de código**
+VS Code
+**Arquitetura do Banco de Dados**
+MySQL
+
+**BPMN**
+MySQL
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+A estrutura e o design da plataforma são apresentadas a seguir, mostrando as principais decisões arquiteturais tomadas durante o desenvolvimento do projeto. Isso inclui a definição dos componentes do sistema, a forma como eles interagem entre si e a distribuição das responsabilidades. São abordados aspectos como a lógica de negócio, além de outros elementos relevantes para o projeto, como os papéis de usuários e como sua interação com o sistema geraria e manipularia os dados.
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
+
+**Modelo Entidadade Relacionamento**
+
 > ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+MySQL
 
+**Diagrama de Entidadade e Relacionamento**
+
+> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+MySQL
+
+**Tabelas no Banco de Dados**
+
+> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+MySQL
 
 # Avaliação da Aplicação
 
