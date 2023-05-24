@@ -89,6 +89,17 @@ body {
   margin-top: 5px;
 }
 
+
+input:required:invalid:not(:focus):not(.interacted) {
+  border: 2px solid red;
+}
+
+input:required:valid:not(:focus):not(.interacted) {
+  border: 2px solid green;
+}
+
+
+
 .cadastro button {
   background-color: grey;
   color: black;

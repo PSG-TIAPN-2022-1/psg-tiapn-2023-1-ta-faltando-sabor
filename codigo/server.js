@@ -9,13 +9,7 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.setHeader("Access-Control-Allow-Credentials", true);
-    next();
-});
+
 
 
 const connection = mysql.createConnection({
@@ -33,6 +27,8 @@ connection.connect((err) => {
 
     console.log("Conexão estabelecida!" + connection.threadId);
 });
+
+app.options('*', cors())
 
 app.get('/usuario', (req, res) => {
   connection.query('SELECT * FROM usuario', (err,rows,fields) => {
@@ -56,7 +52,7 @@ app.post('/usuario', (req, res) => {
         if (err) {
           console.log("Erro ao executar consulta!");
           console.log(err);
-          return;
+          return res.status(500).json({ message: 'Erro ao cadastrar usuário!' });
         }
         res.json({ message: 'Cadastro realizado!' });
       }

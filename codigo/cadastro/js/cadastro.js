@@ -1,8 +1,8 @@
 function cadastrar() {
-  const nome = document.getElementById("nome").value;
-  const idade = document.getElementById("idade").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+  let nome = document.getElementById("nome").value;
+  let idade = document.getElementById("idade").value;
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("senha").value;
 
   /* Codigo pra validar email e tambem pra verificar a força da senha (Será implementado depois)
     function validarEmail(email) {
@@ -37,28 +37,28 @@ function cadastrar() {
     senha: senha,
   };
 
-
-  console.log("Enviando requisição de cadastro...");
-
-
   axios.post("http://localhost:3000/usuario", values)
-  .then((result) => {
-    const mensagem = document.getElementById("mensagem");
-    mensagem.textContent = "Cadastro realizado com sucesso!";
-    mensagem.classList.add("mensagem-sucesso");
-  })
-  .catch((error) => {
-    if (error.response && error.response.status === 409) {
+    .then((response) => {
       const mensagem = document.getElementById("mensagem");
-      mensagem.textContent = "Erro! Usuário já cadastrado!";
+      if (response.status >= 400) {
+        window.alert("Erro! Usuário já cadastrado!");
+        mensagem.textContent = "Erro! Usuário já cadastrado!";
+        mensagem.classList.remove("mensagem-sucesso");
+        mensagem.classList.add("mensagem-erro");
+      } else {
+        mensagem.textContent = "Cadastro realizado com sucesso!";
+        mensagem.classList.add("mensagem-sucesso");
+      }
+    })
+    .catch((error) => {
+      window.alert("Erro! Usuário já cadastrado!");
+      const mensagem = document.getElementById("mensagem");
+      mensagem.textContent = "Erro ao realizar o cadastro!";
       mensagem.classList.remove("mensagem-sucesso");
       mensagem.classList.add("mensagem-erro");
-    } else {
       console.log(error);
-    }
-  });
+    });
 }
-
 
 function togglePasswordVisibility() {
   const senhaInput = document.getElementById("senha");

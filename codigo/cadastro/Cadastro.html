@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/css/Cadastro.css">
-    <script type="text/javascript" src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/js/cadastro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Tela de Cadastro</title>
 </head>
@@ -21,23 +20,24 @@
     <form class="cadastro">
 		<h1>Cadastre-se</h1>
 		<label for="nome">Nome:</label>
-		<input type="text" id="nome" name="nome" required>
+		<input type="text" id="nome" pattern=".{3,}" name="nome" required>
 		<label for="idade">Idade:</label>
-		<input type="number" id="idade" name="idade" required>
+		<input type="number" id="idade" min="10" max="99" name="idade" required>
 		<label for="email">E-mail:</label>
-		<input type="email" id="email" name="email" required>
+		<input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" required>
 		<label for="senha">Senha:</label>
 		<div class="input-container">
-            <input type="password" id="senha" name="senha" required>
+            <input type="password" id="senha" pattern=".{4,}" name="senha" required>
             <i class="toggle-password" onclick="togglePasswordVisibility()">👁️</i>
         </div>
         <a style="color: black;" href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html" class="login-link">Já é cadastrado? Login</a>
         <div id="mensagem"></div>
-		<button type="button" onclick="cadastrar()">Cadastrar</button>
+		<button type="button" id="cadastro" onclick="cadastrar()">Cadastrar</button>
 	</form>
 
     <div class="footer">
         <p> © Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>
     </div>
+    <script type="text/javascript" src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/js/cadastro.js"></script>
 </body>
 </html>
