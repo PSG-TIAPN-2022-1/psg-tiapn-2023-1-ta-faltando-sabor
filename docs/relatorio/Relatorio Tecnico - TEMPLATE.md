@@ -303,8 +303,10 @@ Para o bom desenvolvimento da plataforma proposta, foi preciso planejar e estrut
 Os recursos tecnológicos empregados no desenvolvimento da plataforma web serão apresentados a seguir. A escolha das tecnologias teve como base em critérios como compatibilidade, desempenho e segurança.
 
 **Linguagens** 
+
 HTML, CSS, JavaScript, SQL
 **Bibliotecas** 
+
 React, Bootstrap
 **Gerenciamento do Projeto**
 Trello
