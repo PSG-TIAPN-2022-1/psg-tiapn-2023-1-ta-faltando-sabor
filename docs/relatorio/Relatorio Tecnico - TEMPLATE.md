@@ -316,9 +316,9 @@ Os recursos tecnológicos empregados no desenvolvimento da plataforma web serão
 
 O modelo foi elaborado considerando dois principais papéis dos usuários da plataforma: aquele que procura uma receita e aquele que cadastra uma nova opção no sistema. Tendo essas duas intenções possíveis como base, foi possível estruturar um passo a passo do caminho desses usuários pela plataforma, assim como qual seria o comportamento da aplicação em cada um dos casos.
 
-(images/Tá Faltando Sabor-BPMN-AdRec.png)
+!(images/Tá Faltando Sabor-BPMN-AdRec.png)
 
-(images/Tá Faltando Sabor-BPMN-PesqRec.png)
+!(images/Tá Faltando Sabor-BPMN-PesqRec.png)
 
 ## Arquitetura da solução
 
@@ -329,15 +329,15 @@ Com o intuito de visualizar o funcionamento do sistema, algumas representações
 
 **Modelo Entidade Relacionamento**
 
-(images/MER.jpeg)
+!(images/MER.jpeg)
 
 **Diagrama de Entidadade e Relacionamento**
 
-(/images/DER.jpeg)
+!(images/DER.jpeg)
 
 **Tabelas no Banco de Dados**
 
-(images/Tabelas.jpeg)
+!(images/Tabelas.jpeg)
 
 # Avaliação da Aplicação
 
