@@ -302,41 +302,42 @@ Para o bom desenvolvimento da plataforma proposta, foi preciso planejar e estrut
 
 Os recursos tecnológicos empregados no desenvolvimento da plataforma web serão apresentados a seguir. A escolha das tecnologias teve como base em critérios como compatibilidade, desempenho e segurança.
 
-**Linguagens** 
+**Linguagens** : HTML, CSS, JavaScript, SQL
 
-HTML, CSS, JavaScript, SQL
-**Bibliotecas** 
+**Bibliotecas** : React, Bootstrap
 
-React, Bootstrap
-**Gerenciamento do Projeto**
-Trello
-**Edição de código**
-VS Code
-**Arquitetura do Banco de Dados**
-MySQL
+**Gerenciamento do Projeto**: Trello
+
+**Edição de código**: VS Code
+
+**Arquitetura do Banco de Dados**: MySQL
 
 **BPMN**
-MySQL
+
+O modelo foi elaborado considerando dois principais papéis dos usuários da plataforma: aquele que procura uma receita e aquele que cadastra uma nova opção no sistema. Tendo essas duas intenções possíveis como base, foi possível estruturar um passo a passo do caminho desses usuários pela plataforma, assim como qual seria o comportamento da aplicação em cada um dos casos.
+
+(images/Tá Faltando Sabor-BPMN-AdRec.png)
+
+(images/Tá Faltando Sabor-BPMN-PesqRec.png)
 
 ## Arquitetura da solução
 
 A estrutura e o design da plataforma são apresentadas a seguir, mostrando as principais decisões arquiteturais tomadas durante o desenvolvimento do projeto. Isso inclui a definição dos componentes do sistema, a forma como eles interagem entre si e a distribuição das responsabilidades. São abordados aspectos como a lógica de negócio, além de outros elementos relevantes para o projeto, como os papéis de usuários e como sua interação com o sistema geraria e manipularia os dados.
 
+Com o intuito de visualizar o funcionamento do sistema, algumas representações visuais foram elaboradas. O Modelo Entidade Relacionamento do projeto foi criado para que a interação entre os elementos da aplição fossem mais claramente compreendidos. Através dele, foi possível construir o Diagrama de Entidade e Relacionamento, aprofundando o entendimento acerca dos processos envolvendo o comportamento dos usuáriosao utlizarem a plataforma. Este processo possibilitou a criação do banco de dados do Tá Faltando Sabor, cuja estrutura está representada ao final desta seção. 
 
-**Modelo Entidadade Relacionamento**
 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-MySQL
+**Modelo Entidade Relacionamento**
+
+(images/MER.jpeg)
 
 **Diagrama de Entidadade e Relacionamento**
 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-MySQL
+(images/DER.jpeg)
 
 **Tabelas no Banco de Dados**
 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-MySQL
+(images/Tabelas.jpeg)
 
 # Avaliação da Aplicação
 
