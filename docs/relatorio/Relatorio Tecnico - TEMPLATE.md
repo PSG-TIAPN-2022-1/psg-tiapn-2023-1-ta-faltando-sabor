@@ -333,7 +333,7 @@ Com o intuito de visualizar o funcionamento do sistema, algumas representações
 
 **Diagrama de Entidadade e Relacionamento**
 
-(images/DER.jpeg)
+(./images/DER.jpeg)
 
 **Tabelas no Banco de Dados**
 
