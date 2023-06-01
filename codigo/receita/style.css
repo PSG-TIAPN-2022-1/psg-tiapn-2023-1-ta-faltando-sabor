@@ -1,0 +1,27 @@
+.navbar{
+    background: #e66c2f;
+}
+.navbar a{
+    color: aliceblue;
+}
+
+.titulo-receita{
+    padding: 1em;
+    text-align: center;
+}
+.img {
+   
+    
+}
+.img img{
+     width: 700px;
+    height: 400px; 
+    border-radius: 3em;
+    
+    
+}
+
+.descricao {
+   
+    
+}
