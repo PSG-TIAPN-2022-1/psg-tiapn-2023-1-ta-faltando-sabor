@@ -4,7 +4,7 @@ function cadastrar() {
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
 
-  /* Codigo pra validar email e tambem pra verificar a força da senha (Será implementado depois)
+  // Codigo pra validar email e tambem pra verificar a força da senha (Será implementado depois)
     function validarEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
@@ -24,7 +24,6 @@ function cadastrar() {
         console.log("Senha não é forte o suficiente!");
         return;
     }
-    */
 
   if (nome === "" || idade === "" || email === "" || senha === "") {
     return window.alert("Preencha todos os campos!");
@@ -40,22 +39,14 @@ function cadastrar() {
   axios.post("http://localhost:3000/usuario", values)
     .then((response) => {
       const mensagem = document.getElementById("mensagem");
-      if (response.status >= 400) {
-        window.alert("Erro! Usuário já cadastrado!");
-        mensagem.textContent = "Erro! Usuário já cadastrado!";
-        mensagem.classList.remove("mensagem-sucesso");
-        mensagem.classList.add("mensagem-erro");
-      } else {
-        mensagem.textContent = "Cadastro realizado com sucesso!";
-        mensagem.classList.add("mensagem-sucesso");
-      }
+      mensagem.textContent = "Cadastro realizado com sucesso!";
+      mensagem.classList.add("mensagem-sucesso");
     })
     .catch((error) => {
-      window.alert("Erro! Usuário já cadastrado!");
       const mensagem = document.getElementById("mensagem");
-      mensagem.textContent = "Erro ao realizar o cadastro!";
-      mensagem.classList.remove("mensagem-sucesso");
+      mensagem.textContent = "Erro! Usuário já cadastrado!";
       mensagem.classList.add("mensagem-erro");
+      mensagem.classList.remove("mensagem-sucesso");
       console.log(error);
     });
 }
