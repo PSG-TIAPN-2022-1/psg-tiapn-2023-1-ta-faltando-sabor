@@ -1,0 +1,159 @@
+ body {
+
+    background-image: url(https://paribar.com.br/wp-content/uploads/2021/04/comida-brasileira.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+}
+
+
+.principal {
+
+    margin-top: 5em;
+    margin-bottom: 5em;
+    width: 570px;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    border-color: rgb(96, 31, 15);
+    border-radius: 20px;
+    background: rgb(255, 255, 255, 0.9);
+    align-items: center;
+
+}
+
+@media only screen and (max-width: 572px) {
+    .principal{
+        width: 400px;
+        
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .principal{
+        width: 360px;
+    }
+     
+   
+    
+}
+
+.navbar {
+    background-color: rgb(230, 108, 47, 0.9);
+}
+
+.navbar a {
+    color: aliceblue;
+}
+
+.logo img {
+    width: 200px;
+    height: 35px;
+}
+
+
+
+ textarea {
+    width: 100px;
+    height: 150px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+
+}
+
+.Texto h5 {
+    margin-top: 35px;
+    margin-left: 70px;
+}
+
+.Receita {
+    margin-left: 80px;
+    margin-top: 30px;
+    height: 32px;
+    
+} 
+
+
+
+.Receita .form-control {
+    max-width: 80%;
+    height: 10px;
+}
+
+
+.Ingredientes {
+    margin-left: 80px;
+    margin-top: 30px;
+    
+}
+
+
+.Ingredientes .form-control {
+    max-width: 80%;
+   
+
+}
+
+.Preparo {
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.Preparo .form-control {
+    max-width: 80%;
+    
+
+}
+
+.Descricao {
+    margin-left: 80px;
+    margin-top: 3.5em;
+
+}
+
+.Descricao .form-control {
+    max-width: 80%;
+    
+
+}
+
+.Imagem {
+    margin-left: 80px;
+    margin-top: 30px;
+
+}
+
+.Imagem .form-control {
+    max-width: 80%;
+    padding: 15px;
+}
+
+#buttonCadastro{
+    background: rgb(96, 31, 15);
+    color: white;
+    margin-left: 5em;
+    margin-top: 2em;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rod {
+    margin-top: 1em;
+    background-color: rgb(230, 108, 47, 0.9);
+    padding: 1em;
+    text-align: center;
+}
+
+.rod h6 {
+    color: aliceblue;
+
+
+}
+
+
+ 
