@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/codigo/internal/menu/menu.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/codigo/internal/menu/menu.css" />
     <title>Tela de Menu</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="#" class="logo">Logo</a>
-        <div class="right">
-            <a href="#">Cadastrar Receitas +</a>
-            <a href="/codigo/login/Login.html">Login</a>
-            <a href="/codigo/cadastro/Cadastro.html">Cadastro</a>
-        </div>
+      <a href="#" class="logo">Logo</a>
+      <div class="right">
+        <a href="#">Cadastrar Receitas +</a>
+        <a href="/codigo/login/Login.html">Login</a>
+        <a href="/codigo/cadastro/Cadastro.html">Cadastro</a>
+      </div>
     </nav>
 
-    <div style="
-    width: 780px;
-    height: 300px;
-    border: solid 1px;
-    border-color: #202020;
-    top: 274px;
-    position: relative;
-    border-radius: 15px;"> </div>
+    <!-- <div class="aling">
+      <div class="div1">
+        <span>Selecione os ingredientes para a receita</span>
+      </div>
 
+      <div class="line"></div>
+
+      <div>
+        <label for="filtro">Filtrar por fruta:</label>
+        <input type="text" id="filtro" oninput="filtrarFrutas()">
+        
+        <select id="frutasSelect"></select>
+      </div>
+    </div> -->
+
+    <div
+      style="
+        width: 780px;
+        height: 300px;
+        border: solid 1px;
+        border-color: #202020;
+        top: 274px;
+        position: relative;
+        border-radius: 15px;
+      "
+    ></div>
 
     <div class="footer">
-        <p> © Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>
+      <p>© Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>
     </div>
-</body>
+
+    <script src="/codigo/internal/menu/menu.js"></script>
+  </body>
 </html>

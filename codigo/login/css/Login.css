@@ -94,8 +94,8 @@ body {
 }
 
 .login button {
-  background-color: grey;
-  color: black;
+  background-color: rgb(96, 31, 15);
+  color: white;
   font-weight: bold;
   border: none;
   border-radius: 5px;
@@ -111,10 +111,6 @@ body {
   top: 20px;
 }
 
-.login button:hover {
-  background-color: black;
-  color: white;
-}
 
 .input-container {
   position: relative;
