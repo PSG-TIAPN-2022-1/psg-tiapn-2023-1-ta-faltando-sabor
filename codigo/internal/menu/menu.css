@@ -57,4 +57,22 @@ body {
     height: 70px;
   }
   
+  .line{
+    width: 334%;
+    background-color: #777777;
+    height: 2px;
+    top: 16px;
+    position: relative;
+  }
   
+  
+  .div1{
+    font-size: 25px;
+    color: #777777;
+  }
+
+  .aling{
+    position: relative;
+    left: 1%;
+    margin-top: -12%;
+  }
