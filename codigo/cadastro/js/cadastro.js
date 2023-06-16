@@ -1,18 +1,51 @@
-$(document).ready(function() {
-  $('input').on('input', function() {
-    $(this).addClass('interacted');
+$(document).ready(function () {
+  $("input").on("input", function () {
+    $(this).addClass("interacted");
     if (this.checkValidity()) {
-      $(this).css('border', '2px solid green');
+      $(this).css("border", "2px solid green");
     } else {
-      $(this).css('border', '2px solid red');
+      $(this).css("border", "2px solid red");
     }
   });
 
-  $('#cadastro').on('click', function(e) {
+  $("#cadastro").on("click", function (e) {
     cadastrar();
   });
 });
 
+// Codigo pra validar email
+function validarEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+// Verificar a força da senha
+function verificarForcaSenha(senha) {
+  const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  return re.test(senha);
+}
+
+function validarNome(nome) {
+  return nome !== "";
+}
+
+function validarIdade(idade) {
+  return !isNaN(idade) && idade >= 13 && idade <= 100;
+}
+
+function exibirMensagemErro(mensagem) {
+  const mensagemElement = document.getElementById("mensagem");
+  mensagemElement.textContent = mensagem;
+  mensagemElement.classList.add("mensagem-erro");
+  mensagemElement.classList.remove("mensagem-sucesso");
+}
+
+function exibirMensagemSucesso(mensagem) {
+  const mensagemElement = document.getElementById("mensagem");
+  mensagemElement.textContent = mensagem;
+  mensagemElement.classList.add("mensagem-sucesso");
+  mensagemElement.classList.remove("mensagem-erro");
+}
 
 function cadastrar() {
   let nome = document.getElementById("nome").value;
@@ -20,28 +53,24 @@ function cadastrar() {
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
 
-  // Codigo pra validar email e tambem pra verificar a força da senha
-    function validarEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-    
-    if (!validarEmail(email)) {
-        console.log("Endereço de e-mail inválido!");
-        return;
-    }
-
-    function verificarForcaSenha(senha) {
-        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        return re.test(senha);
-    }
-    
-    if (!verificarForcaSenha(senha)) {
-      alert("Sua senha não é forte o suficiente! Coloque uma senha mais forte!");
-    }
-
-  if (nome === "" || idade === "" || email === "" || senha === "") {
+  if (!nome || !idade || !email || !senha) {
     return window.alert("Preencha todos os campos!");
+  }
+
+  if (!validarNome(nome)) {
+    return window.alert("Por favor, insira seu nome!");
+  }
+
+  if (!validarIdade(idade)) {
+    return window.alert("Por favor, insira uma idade válida (entre 13 e 100)!");
+  }
+
+  if (!validarEmail(email)) {
+    return window.alert("O endereço de e-mail deve estar no formato nome@domínio.com");
+  }
+
+  if (!verificarForcaSenha(senha)) {
+    return window.alert("Sua senha não é forte o suficiente! Coloque uma senha mais forte!");
   }
 
   const values = {
@@ -51,27 +80,29 @@ function cadastrar() {
     senha: senha,
   };
 
-  console.log("Enviando requisição");
-
-  axios.post("http://localhost:3000/usuario", values)
-  .then((response) => {
-    const mensagem = document.getElementById("mensagem");
-    mensagem.textContent = "Cadastro realizado com sucesso!";
-    mensagem.classList.add("mensagem-sucesso");
-  })
-  .catch((error) => {
-    const mensagem = document.getElementById("mensagem");
-  
-    if (error.response && error.response.status === 409) {
-      mensagem.textContent = "Erro! Usuário já cadastrado!";
-    } else {
-      mensagem.textContent = "Ocorreu um erro inesperado!";
-    }
-  
-    console.log("O erro é: ", error);
-    mensagem.classList.add("mensagem-erro");
-    mensagem.classList.remove("mensagem-sucesso");
-  });    
+  axios
+    .post("http://localhost:3000/usuario", values)
+    .then((response) => {
+      const mensagem = response.data.message;
+      if (response.data.success) {
+        // Cadastro realizado com sucesso
+        exibirMensagemSucesso(mensagem);
+        // Limpar os campos de entrada após o cadastro bem-sucedido
+        limparCampos();
+      } else {
+        // Erro ao cadastrar usuário
+        exibirMensagemErro(mensagem);
+      }
+    })
+    .catch((error) => {
+      // Erro de requisição
+      console.log(error);
+      if (error.response && error.response.data && error.response.data.message) {
+        exibirMensagemErro(error.response.data.message);
+      } else {
+        exibirMensagemErro("Ocorreu um erro inesperado!");
+      }
+    });
 }
 
 function togglePasswordVisibility() {
@@ -80,3 +111,12 @@ function togglePasswordVisibility() {
     senhaInput.getAttribute("type") === "password" ? "text" : "password";
   senhaInput.setAttribute("type", type);
 }
+
+// Função para limpar os campos de entrada
+function limparCampos() {
+  document.getElementById("nome").value = "";
+  document.getElementById("idade").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("senha").value = "";
+}
+
