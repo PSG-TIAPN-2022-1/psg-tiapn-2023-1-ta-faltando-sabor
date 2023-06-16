@@ -1,0 +1,164 @@
+.navbar{
+    background: #e66c2f;
+}
+.navbar a{
+    color: aliceblue;
+}
+
+
+.img img{
+    width: 100%;
+    height: 50vh;
+    display: block;
+    filter: brightness(60%);
+    border-radius: 2em;
+    
+}
+
+.img{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+
+    margin-top: 3em;
+    text-align: center;
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+    margin-right: 3em;
+}
+.text-banner{
+    position: absolute;
+    z-index: 99999;
+    
+    color: #ffffff;
+    text-shadow: 0.2em 0.2em 0.2em black
+} 
+.text-banner h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn:hover{
+ 
+ background-color: rgb(131, 28, 15);
+ color: aliceblue;  
+ 
+}
+.btn{
+
+background-color: rgb(97,25,15);
+color: aliceblue;
+font-size: 18px;
+padding: 8px 30px;
+}
+
+.sugestoes{
+    margin-bottom: 2em;
+}
+
+.receitas img{
+    margin-bottom: 2em;
+    border-radius: 1em;
+    filter: brightness(90%);
+    width: 100%;
+    height: 250px;
+}
+
+.icone{
+    
+    padding: 5px;
+    margin-top: -2em;
+    display: flex;
+    justify-content: end;
+}
+.icone i{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fa-heart{
+    color: #e66c2f;
+    font-size: 24px;
+}
+.fa-arrow-down{
+    font-size: 24px;
+    color: #e66c2f;
+}
+
+.rod{
+    margin-top: 1em;
+    background-color: #e66c2f;
+    padding: 1em;
+}
+.rod h6{
+    color:aliceblue;
+    text-align: center;
+}
+
+.container{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.direita {
+text-align: end;
+position: absolute;
+margin-left: 10em;
+}
+
+.linkfavorito h2{
+    text-align: center;
+    color: rgba(0, 0, 0, .6);
+
+
+}
+
+.linkfavorito {
+    /* background-color: rgb(96, 31, 15,0.8); */
+    background-color: rgba(255, 242, 235, 0.8);
+    text-align: end;
+    margin-left: 40em;
+    margin-right: -8em;
+    margin-top: 1em;
+    margin-bottom: 1.05em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border: rgb(96, 31, 15,0.8)  solid 3px;
+    border-radius: 1em;
+
+
+}
+
+
+.esquerda h2 {
+    margin-right: 4.6em;
+    background-color: rgba(255, 242, 235, 0.8);
+    border:  rgb(96, 31, 15,0.8) 3px solid;
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
+    border-radius: 0.5em;
+
+
+    text-align: center;
+    color: rgba(0, 0, 0, .6);
+
+}
+
+.fotoperfil img {
+    border-radius: 18em;
+    margin-bottom: 0.6em;
+}
+
+button {
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    border-radius: 10em;
+    background-color: rgba(255, 242, 235, 0.8);
+    border: rgb(96, 31, 15,0.8) 3px solid;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
+}

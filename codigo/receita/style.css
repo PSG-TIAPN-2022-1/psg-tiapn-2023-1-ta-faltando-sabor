@@ -7,17 +7,166 @@
 
 .titulo-receita{
     padding: 1em;
-    text-align: center;
-}
-.img {
-   
     
+}
+.navbar-brand img{
+ width: 200px;
+ height: 35px;
 }
 .img img{
-     width: 700px;
-    height: 400px; 
-    border-radius: 3em;
-    
-    
+     /* width: 700px;
+    height: 400px; */
+    max-width: 100%;
+    max-height: 100%; 
+    border-radius: 2em;
 }
 
+.descricao{
+    padding-top: 4.5em;
+    /* padding-left: 10em; */
+    text-align: center;
+}
+
+.descricao h2{
+    /* width: 100%; */
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(96, 31, 15,0.8);
+    color: white;
+}
+
+.ingredientes{
+    padding-top: 2.5em;
+    text-align: center;
+}
+.ingredientes h2{
+    /* width: 100%; */
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(96, 31, 15,0.8);
+    color: white;
+}
+
+.modo-preparo h2{
+    /* width: 100%; */
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(96, 31, 15,0.8);
+    color: white;
+}
+
+.modo-preparo{
+    padding-top: 2.5em;
+    text-align: center;
+}
+
+.rod{
+    margin-top: 11em;
+    background-color: #e66c2f;
+    padding: 1em;
+}
+.rod h6{
+    color:aliceblue;
+    text-align: center;
+}
+
+ @media only screen and (max-width: 1199px) {
+.descricao{
+    text-align: center;
+    /* padding-left: 0em; */
+}
+
+}
+
+@media only screen and (max-width: 1199px) {
+    .img img{
+        /* width: 700px;
+       height: 400px; */
+       max-width: 100%;
+       max-height: 100%; 
+       border-radius: 2em;
+       align-items: center;
+   }
+    
+    }
+
+/*
+@media only screen and (max-width: 991px) {
+    .descricao{
+        text-align: center;
+    
+    }
+        .descricao h2{
+        margin-left: -4.9em;
+        margin-bottom: -1em;
+        width: 751px;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: rgb(96, 31, 15,0.8);
+        color: white;
+    }
+    } */
+
+    /* @media only screen and (max-width: 820px) {
+        .descricao{
+            text-align: center;
+        
+        }
+            .descricao h2{
+            margin-left: -5em;
+            margin-bottom: -1em;
+            width: 688px;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(96, 31, 15,0.8);
+            color: white;
+        }
+
+        .ingredientes{
+            padding-top: 2.5em;
+            text-align: center;
+        }
+        .ingredientes h2{
+            width: 100%;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(96, 31, 15,0.8);
+            color: white;
+        }
+        
+        .modo-preparo h2{
+            width: 100%;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(96, 31, 15,0.8);
+            color: white;
+        }
+        
+        .modo-preparo{
+            text-align: center;
+        }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .descricao{
+                text-align: center;
+            
+            }
+                .descricao h2{
+                margin-left: -5.1em;
+                margin-bottom: -1em;
+                width: 510px;
+                border-radius: 15px;
+                padding: 10px;
+                background-color: rgb(96, 31, 15,0.8);
+                color: white;
+            }
+
+            .img img{
+                
+              max-width: 100%;
+              max-height: 100%;
+               border-radius: 2em;
+           }
+          
+            } */
