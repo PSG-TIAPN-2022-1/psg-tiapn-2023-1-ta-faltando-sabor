@@ -33,19 +33,6 @@ function validarIdade(idade) {
   return !isNaN(idade) && idade >= 13 && idade <= 100;
 }
 
-function exibirMensagemErro(mensagem) {
-  const mensagemElement = document.getElementById("mensagem");
-  mensagemElement.textContent = mensagem;
-  mensagemElement.classList.add("mensagem-erro");
-  mensagemElement.classList.remove("mensagem-sucesso");
-}
-
-function exibirMensagemSucesso(mensagem) {
-  const mensagemElement = document.getElementById("mensagem");
-  mensagemElement.textContent = mensagem;
-  mensagemElement.classList.add("mensagem-sucesso");
-  mensagemElement.classList.remove("mensagem-erro");
-}
 
 function cadastrar() {
   let nome = document.getElementById("nome").value;
@@ -81,42 +68,41 @@ function cadastrar() {
   };
 
   axios
-    .post("http://localhost:3000/usuario", values)
-    .then((response) => {
-      const mensagem = response.data.message;
-      if (response.data.success) {
-        // Cadastro realizado com sucesso
-        exibirMensagemSucesso(mensagem);
-        // Limpar os campos de entrada após o cadastro bem-sucedido
-        limparCampos();
-      } else {
-        // Erro ao cadastrar usuário
-        exibirMensagemErro(mensagem);
-      }
-    })
-    .catch((error) => {
-      // Erro de requisição
-      console.log(error);
-      if (error.response && error.response.data && error.response.data.message) {
-        exibirMensagemErro(error.response.data.message);
-      } else {
-        exibirMensagemErro("Ocorreu um erro inesperado!");
-      }
-    });
+  .post("http://localhost:3000/usuario", values)
+  .then((response) => {
+    const mensagemElement = document.getElementById("mensagem");
+    mensagemElement.textContent = "Cadastro realizado com sucesso!";
+    mensagemElement.className = ''; // Limpa todas as classes
+    mensagemElement.classList.add("mensagem-sucesso");
+    // Limpar os campos de entrada após o cadastro bem-sucedido
+    document.getElementById("nome").value = "";
+    document.getElementById("idade").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("senha").value = "";
+    // Redirecionar para a página de login após 2 segundos
+    setTimeout(function() {
+      window.location.href = "/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html";
+    }, 2000);
+  })
+  .catch((error) => {
+    const mensagemElement = document.getElementById("mensagem");
+    mensagemElement.textContent = "Erro! Usuário já cadastrado!";
+    mensagemElement.className = ''; // Limpa todas as classes
+    mensagemElement.classList.add("mensagem-erro");
+
+    if (error.response && error.response.data && error.response.data.message) {
+      mensagemElement.textContent = error.response.data.message;
+    } else {
+      mensagemElement.textContent = "Ocorreu um erro inesperado!";
+    }
+  });
 }
+
 
 function togglePasswordVisibility() {
   const senhaInput = document.getElementById("senha");
   const type =
     senhaInput.getAttribute("type") === "password" ? "text" : "password";
   senhaInput.setAttribute("type", type);
-}
-
-// Função para limpar os campos de entrada
-function limparCampos() {
-  document.getElementById("nome").value = "";
-  document.getElementById("idade").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("senha").value = "";
 }
 
