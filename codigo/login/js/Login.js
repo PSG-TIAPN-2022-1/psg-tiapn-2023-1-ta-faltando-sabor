@@ -61,23 +61,30 @@ function login() {
   axios
     .post("http://localhost:3000/usuario", values)
     .then((response) => {
-      const mensagem = response.data.message;
-      if (response.data.success) {
-        // Login realizado com sucesso
-        exibirMensagemSucesso(mensagem);
-        // Redirecionar para outra página
-        window.location.href = "/home-page/index.html";
-      } else {
-        // Usuário ou senha inválidos
-        exibirMensagemErro(mensagem);
-      }
+      const mensagemElement = document.getElementById("mensagem");
+      mensagemElement.textContent = "Login realizado com sucesso!";
+      mensagemElement.className = ''; // Limpa todas as classes
+      mensagemElement.classList.add("mensagem-sucesso");
+      // Limpar os campos de entrada após o cadastro bem-sucedido
+      document.getElementById("nome").value = "";
+      document.getElementById("idade").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("senha").value = "";
+      // Redirecionar para a página principal após 2 segundos
+        setTimeout(function() {
+          window.location.href = "/psg-tiapn-2023-1-ta-faltando-sabor/codigo/home-page/index.html";
+        }, 2000);
     })
     .catch((error) => {
-      console.log(error);
+      const mensagemElement = document.getElementById("mensagem");
+      mensagemElement.textContent = "Erro! As credenciais fornecidas são inválidas!";
+      mensagemElement.className = ''; // Limpa todas as classes
+      mensagemElement.classList.add("mensagem-erro");
+
       if (error.response && error.response.data && error.response.data.message) {
-        exibirMensagemErro(error.response.data.message);
+        mensagemElement.textContent = error.response.data.message;
       } else {
-        exibirMensagemErro("Ocorreu um erro inesperado!");
+        mensagemElement.textContent = "Ocorreu um erro inesperado!";
       }
     });
 }
