@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/codigo/internal/menu/menu.css" />
     <title>Tela de Menu</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
+
   <body>
+
     <nav class="navbar">
       <a href="#" class="logo">Logo</a>
       <div class="right">
@@ -16,37 +20,81 @@
       </div>
     </nav>
 
-    <!-- <div class="aling">
+    <div class="aling">
       <div class="div1">
         <span>Selecione os ingredientes para a receita</span>
       </div>
 
       <div class="line"></div>
 
-      <div>
-        <label for="filtro">Filtrar por fruta:</label>
-        <input type="text" id="filtro" oninput="filtrarFrutas()">
-        
-        <select id="frutasSelect"></select>
-      </div>
-    </div> -->
+      <div class="div2">
 
-    <div
-      style="
-        width: 780px;
-        height: 300px;
-        border: solid 1px;
-        border-color: #202020;
-        top: 274px;
-        position: relative;
-        border-radius: 15px;
-      "
-    ></div>
+        <div >
+          <label>Filtrar por fruta:</label>
+          <div class="wrapper">
+            <div class="select-btn">
+              <span>Selecione uma fruta</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input class="input1" spellcheck="false"  type="text" placeholder="Pesquisar">
+              </div>
+              <ul class="options"></ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div >
+          <label>Filtrar por verdura:</label>
+          <div class="wrapperverdura">
+            <div class="select-btnverdura">
+              <span>Selecione uma verdura</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input class="input1verdura" spellcheck="false"  type="text" placeholder="Pesquisar">
+              </div>
+              <ul class="optionsverdura"></ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div >
+          <label>Filtrar por legume:</label>
+          <div class="wrapperlegume">
+            <div class="select-btnlegume">
+              <span>Selecione um legume</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input class="input1legume" spellcheck="false"  type="text" placeholder="Pesquisar">
+              </div>
+              <ul class="optionslegume"></ul>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+     
+    </div>
+
+
+   
 
     <div class="footer">
       <p>© Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>
     </div>
 
     <script src="/codigo/internal/menu/menu.js"></script>
+        
   </body>
 </html>
