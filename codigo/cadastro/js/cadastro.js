@@ -1,17 +1,37 @@
-$(document).ready(function() {
-  $('input').on('input', function() {
-    $(this).addClass('interacted');
+$(document).ready(function () {
+  $("input").on("input", function () {
+    $(this).addClass("interacted");
     if (this.checkValidity()) {
-      $(this).css('border', '2px solid green');
+      $(this).css("border", "2px solid green");
     } else {
-      $(this).css('border', '2px solid red');
+      $(this).css("border", "2px solid red");
     }
   });
 
-  $('#cadastro').on('click', function(e) {
+  $("#cadastro").on("click", function (e) {
     cadastrar();
   });
 });
+
+// Codigo pra validar email
+function validarEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+// Verificar a força da senha
+function verificarForcaSenha(senha) {
+  const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  return re.test(senha);
+}
+
+function validarNome(nome) {
+  return nome !== "";
+}
+
+function validarIdade(idade) {
+  return !isNaN(idade) && idade >= 13 && idade <= 100;
+}
 
 
 function cadastrar() {
@@ -20,28 +40,24 @@ function cadastrar() {
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
 
-  // Codigo pra validar email e tambem pra verificar a força da senha
-    function validarEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-    
-    if (!validarEmail(email)) {
-        console.log("Endereço de e-mail inválido!");
-        return;
-    }
-
-    function verificarForcaSenha(senha) {
-        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        return re.test(senha);
-    }
-    
-    if (!verificarForcaSenha(senha)) {
-      alert("Sua senha não é forte o suficiente! Coloque uma senha mais forte!");
-    }
-
-  if (nome === "" || idade === "" || email === "" || senha === "") {
+  if (!nome || !idade || !email || !senha) {
     return window.alert("Preencha todos os campos!");
+  }
+
+  if (!validarNome(nome)) {
+    return window.alert("Por favor, insira seu nome!");
+  }
+
+  if (!validarIdade(idade)) {
+    return window.alert("Por favor, insira uma idade válida (entre 13 e 100)!");
+  }
+
+  if (!validarEmail(email)) {
+    return window.alert("O endereço de e-mail deve estar no formato nome@domínio.com");
+  }
+
+  if (!verificarForcaSenha(senha)) {
+    return window.alert("Sua senha não é forte o suficiente! Coloque uma senha mais forte!");
   }
 
   const values = {
@@ -51,28 +67,37 @@ function cadastrar() {
     senha: senha,
   };
 
-  console.log("Enviando requisição");
-
-  axios.post("http://localhost:3000/usuario", values)
+  axios
+  .post("http://localhost:3000/usuario", values)
   .then((response) => {
-    const mensagem = document.getElementById("mensagem");
-    mensagem.textContent = "Cadastro realizado com sucesso!";
-    mensagem.classList.add("mensagem-sucesso");
+    const mensagemElement = document.getElementById("mensagem");
+    mensagemElement.textContent = "Cadastro realizado com sucesso!";
+    mensagemElement.className = ''; // Limpa todas as classes
+    mensagemElement.classList.add("mensagem-sucesso");
+    // Limpar os campos de entrada após o cadastro bem-sucedido
+    document.getElementById("nome").value = "";
+    document.getElementById("idade").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("senha").value = "";
+    // Redirecionar para a página de login após 2 segundos
+    setTimeout(function() {
+      window.location.href = "/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html";
+    }, 2000);
   })
   .catch((error) => {
-    const mensagem = document.getElementById("mensagem");
-  
-    if (error.response && error.response.status === 409) {
-      mensagem.textContent = "Erro! Usuário já cadastrado!";
+    const mensagemElement = document.getElementById("mensagem");
+    mensagemElement.textContent = "Erro! Usuário já cadastrado!";
+    mensagemElement.className = ''; // Limpa todas as classes
+    mensagemElement.classList.add("mensagem-erro");
+
+    if (error.response && error.response.data && error.response.data.message) {
+      mensagemElement.textContent = error.response.data.message;
     } else {
-      mensagem.textContent = "Ocorreu um erro inesperado!";
+      mensagemElement.textContent = "Ocorreu um erro inesperado!";
     }
-  
-    console.log("O erro é: ", error);
-    mensagem.classList.add("mensagem-erro");
-    mensagem.classList.remove("mensagem-sucesso");
-  });    
+  });
 }
+
 
 function togglePasswordVisibility() {
   const senhaInput = document.getElementById("senha");
@@ -80,3 +105,4 @@ function togglePasswordVisibility() {
     senhaInput.getAttribute("type") === "password" ? "text" : "password";
   senhaInput.setAttribute("type", type);
 }
+

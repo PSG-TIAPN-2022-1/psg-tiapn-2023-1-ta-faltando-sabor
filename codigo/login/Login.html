@@ -10,14 +10,16 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="logo">Logo</a>
-        <div class="right">
-            <a href="#">Cadastrar Receitas +</a>
+        <button type="button" id="botao"><img src="img/menu.png" alt="menu"></button>
+        <img src="img/logo.png" class="logo"></img>
+        <div class="right" id="direito">
+            <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastroReceita/Index.html">Cadastrar Receitas +</a>
             <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html">Login</a>
             <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/Cadastro.html">Cadastro</a>
         </div>
     </nav>
 
+    <div class="background">
     <form class="login">
         <h1>Login</h1>
         <label for="email">E-mail:</label>
@@ -29,12 +31,16 @@
         </div>
         <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/Cadastro.html" class="cadastro-link">Ainda não tem login? Cadastre-se</a>
         <div id="mensagem"></div>
-        <button type="button" onclick="login()">Entrar</button>
+        <button type="button" id="logar">Entrar</button>
     </form>
+    </div>
     
 
     <div class="footer">
         <h6> © Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</h6>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/js/Login.js"></script>
+    <script src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/js/navbar2.js"></script>
 </body>
 </html>
