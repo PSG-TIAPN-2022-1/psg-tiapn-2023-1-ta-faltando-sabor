@@ -1,0 +1,41 @@
+{
+  "receitas": [
+    {
+      "id": 4,
+      "nome": "Frango a parmegiana",
+      "img": "/codigo/home-page/img/parmegiana.avif",
+      "categoria_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Hambúrguer de filé suíno",
+      "img": "/codigo/home-page/img/hamb_suino.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 3,
+      "nome": "Quiche de tomate seco",
+      "img": "/codigo/home-page/img/quiche_tomate.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 1,
+      "nome": "Pudim de leite condensado",
+      "img": "/codigo/home-page/img/pudim.jpg",
+      "categoria_id": 1
+    },
+    {
+      "id": 5,
+      "nome": "Donut com chocolate",
+      "img": "/codigo/home-page/img/donut.avif",
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Churros",
+      "descricao": "",
+      "img": "/codigo/home-page/img/churros_certo.jpg",
+      "categoria_id": 2
+    }
+  ]
+}
