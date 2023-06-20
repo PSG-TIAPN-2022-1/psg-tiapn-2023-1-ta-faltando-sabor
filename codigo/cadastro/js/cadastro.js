@@ -81,7 +81,7 @@ function cadastrar() {
     document.getElementById("senha").value = "";
     // Redirecionar para a página de login após 2 segundos
     setTimeout(function() {
-      window.location.href = "/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html";
+      window.location.href = "/codigo/login/Login.html";
     }, 2000);
   })
   .catch((error) => {

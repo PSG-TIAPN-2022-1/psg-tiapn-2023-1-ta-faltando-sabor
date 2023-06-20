@@ -23,20 +23,6 @@ function validarSenha(senha) {
   return senha !== "";
 }
 
-function exibirMensagemErro(mensagem) {
-  const mensagemElement = document.getElementById("mensagem");
-  mensagemElement.textContent = mensagem;
-  mensagemElement.classList.add("mensagem-erro");
-  mensagemElement.classList.remove("mensagem-sucesso");
-}
-
-function exibirMensagemSucesso(mensagem) {
-  const mensagemElement = document.getElementById("mensagem");
-  mensagemElement.textContent = mensagem;
-  mensagemElement.classList.add("mensagem-sucesso");
-  mensagemElement.classList.remove("mensagem-erro");
-}
-
 function login() {
   let email = document.getElementById("email").value;
   let senha = document.getElementById("senha").value;
@@ -72,7 +58,7 @@ function login() {
       document.getElementById("senha").value = "";
       // Redirecionar para a página principal após 2 segundos
         setTimeout(function() {
-          window.location.href = "/psg-tiapn-2023-1-ta-faltando-sabor/codigo/home-page/index.html";
+          window.location.href = "/codigo/home-page/index.html";
         }, 2000);
     })
     .catch((error) => {
