@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     res.setHeader("Access-Control-Allow-Credentials", true);
@@ -19,10 +19,10 @@ app.use(function(req, res, next) {
 
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'fofi3436',
-    database: 'mydb'
+    host: "localhost",
+    user: "root",
+    password: "fofi3436",
+    database: "mydb",
 });
 
 connection.connect((err) => {
@@ -44,18 +44,19 @@ app.get('/receita', (req, res) => {
     });
 });
 
-app.post('/receita', (req, res) => {
+app.post("/receita", (req, res) => {
     console.log(req.body);
-    const { tituloReceita, descricao, modoPreparo, ingredientes, img } = req.body;
+    const { tituloReceita, descricao, modoPreparo, ingredientes, img, email } = req.body;
     connection.query(
-      'INSERT INTO receita (tituloReceita, descricao, modoPreparo, ingredientes, img) VALUES (?, ?, ?, ?)',
-      [tituloReceita, descricao, modoPreparo, ingredientes, img],
+      "INSERT INTO receita (tituloReceita, descricao, modoPreparo, ingredientes, img, usuario_email) VALUES (?, ?, ?, ?, ?, ?)",
+      [tituloReceita, descricao, modoPreparo, ingredientes, img, email],
       (err, result) => {
         if (err) {
           console.log("Erro ao executar consulta!");
           console.log(err);
           return;
         }
+        
         res.json({ message: 'Cadastro realizado!' });
       }
     );

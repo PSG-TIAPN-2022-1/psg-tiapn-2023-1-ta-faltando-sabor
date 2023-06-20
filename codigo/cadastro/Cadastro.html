@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/codigo/cadastro/css/Cadastro.css">
+    <link rel="stylesheet" href="/codigo/cadastro/css/Cadastro.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Tela de Cadastro</title>
+    <title>Cadastro</title>
 </head>
 <body>
     <nav class="navbar">
+
+      
+
         <button type="button" id="botao"><img src="img/menu.png" alt="menu"></button>
-        <img src="img/logo.png" class="logo"></img>
+        <a href="/codigo/home-page/index.html"> <img src="img/logo.png" class="logo"></img> </a>
         <div class="right" id="direita">
             <a href="/codigo/cadastroReceita/Index.html">Cadastrar Receitas +</a>
             <a href="/codigo/login/Login.html">Login</a>
@@ -32,6 +36,7 @@
             <input type="password" id="senha" pattern=".{4,}" name="senha" required>
             <i class="toggle-password" onclick="togglePasswordVisibility()">👁️</i>
         </div>
+        <a style="color: black;" href="/codigo/login/Login.html" class="login-link">Já é cadastrado? Login</a>
         <a style="color: black;" href="/codigo/login/Login.html" class="login-link">Já é cadastrado? Login</a>
         <div id="mensagem"></div>
 		<button type="button" id="cadastro">Cadastrar</button>

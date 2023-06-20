@@ -15,14 +15,21 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/1d896bb8df.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/1d896bb8df.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/codigo/home-page/style.css" />
     <title>Ta faltando sabor</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#"
+          ><img
+            src="/codigo/home-page/img/Tá Faltando Sabor-Logo-Transparente.png"
+            alt=""
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,15 +47,10 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"
-                >Cadastrar receitas <i class="fa-regular fa-plus"></i></a
-              >
+              <a class="nav-link" href="/codigo/login/Login.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Cadastro</a>
+              <a class="nav-link" href="/codigo/cadastro/Cadastro.html">Cadastro</a>
             </li>
           </ul>
         </div>
@@ -59,24 +61,53 @@
       <div class="img justify-content-center">
         <img src="/codigo/home-page/img/banner6.png" alt="" />
         <div class="text-banner">
-          <h1>SELECIONE OS INGREDIENTES</h1>
+          <!-- <h1>SELECIONE OS INGREDIENTES</h1> -->
+          <img
+            src="/codigo/home-page/img/Tá Faltando Sabor-Logo-Transparente.png"
+            alt=""
+          />
         </div>
       </div>
       <div class="button">
-        <button type="button" class="btn btn">Menu</button>
+        <button type="button" class="btn btn">
+          <a href="/codigo/internal/menu/menu.html"style="text-decoration:none" style="color: aliceblue;"><h6>Selecionar Ingredientes</h6></a>
+        </button>
       </div>
 
       <div class="sugestoes">
-        <h1>Sugestões</h1>
+        <h1>Sugestões de Receitas:</h1>
       </div>
       <div class="receitas">
-        <div class="row ">
-          <div class="col-lg-4 col-md-6">
-            <img src="/codigo/home-page/img/receita1.jpg"  alt="" />
-              <span class="icone"><i class="fa-regular fa-heart"></i>  <i class="fa-solid fa-arrow-down"></i></span>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
+        <div class="row" id="receitasContainer">
+          <script>
+            fetch("db.json")
+              .then((response) => response.json())
+              .then((data) => {
+                // Manipula os dados das receitas
+                const receitasContainer =
+                  document.getElementById("receitasContainer");
+
+                data.receitas.forEach((receita) => {
+                   const receitaElement = document.createElement("div"); 
+                   receitaElement.classList.add('col-lg-4', 'col-md-6');
+                  receitaElement.innerHTML = `
+            <img src="${receita.img}"  alt="" />
+            <h4>${receita.nome}</h4>
+            <span class="icone">  <i class="fa-solid fa-arrow-down"></i></span>
+          </div>`;
+                  receitasContainer.appendChild(receitaElement);
+                });
+              })
+              .catch((error) => {
+                console.log("Ocorreu um erro:", error);
+              });
+          </script>
+          <!-- <div class="col-lg-4 col-md-6">
+            <img src="/codigo/home-page/img/receita2.jpg"  alt="" />
+            <h4></h4>
+            <span class="icone"><i class="fa-regular fa-heart"></i>  <i class="fa-solid fa-arrow-down"></i></span>
+          </div> -->
+          <!--  <div class="col-lg-4 col-md-6">
               <img src="/codigo/home-page/img/receita2.jpg"  alt="" />
               <span class="icone"><i class="fa-regular fa-heart"></i>  <i class="fa-solid fa-arrow-down"></i></span>
             </div>
@@ -118,15 +149,16 @@
           <div class="col-lg-4 col-md-6">
             <img src="/codigo/home-page/img/receita1.jpg"  alt="" />
             <span class="icone"><i class="fa-regular fa-heart"></i>  <i class="fa-solid fa-arrow-down"></i></span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
     <footer>
-        <div class="rod">
-          <h6>Ta faltando sabor &copy; Todos os direitos reservados</h6>
-        </div>
+      <div class="rod">
+        <h6>Ta faltando sabor &copy; Todos os direitos reservados</h6>
+      </div>
     </footer>
+    <script src="/codigo/home-page/script.js"></script>
   </body>
 </html>
