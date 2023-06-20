@@ -23,9 +23,13 @@
     margin-right: 15px;
   }
   
-  .navbar .logo {
-    margin-left: 0;
+   .logo img {
+    
+      width: 200px;
+      height: 35px;
+      margin-left: -1.5em;
   }
+  
   
   .navbar .right {
     display: flex;

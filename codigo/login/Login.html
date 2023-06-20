@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/css/Login.css">
-    <script type="text/javascript" src="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/js/login.js"></script>
+    <link rel="stylesheet" href="/codigo/login/css/Login.css">
+    <script type="text/javascript" src="/codigo/login/js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Tela de Login</title>
+    <title>Login</title>
 </head>
 <body>
     <nav class="navbar">
         <button type="button" id="botao"><img src="img/menu.png" alt="menu"></button>
-        <img src="img/logo.png" class="logo"></img>
+        <a href="/codigo/home-page/index.html"><img src="img/logo.png" class="logo"></img></a>
         <div class="right" id="direito">
-            <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastroReceita/Index.html">Cadastrar Receitas +</a>
-            <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/login/Login.html">Login</a>
-            <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/Cadastro.html">Cadastro</a>
+        
         </div>
     </nav>
 
@@ -29,7 +27,7 @@
             <input type="password" id="senha" name="senha" required>
             <i class="toggle-password" onclick="togglePasswordVisibility()">👁️</i>
         </div>
-        <a href="/psg-tiapn-2023-1-ta-faltando-sabor/codigo/cadastro/Cadastro.html" class="cadastro-link">Ainda não tem login? Cadastre-se</a>
+        <a href="/codigo/cadastro/Cadastro.html" class="cadastro-link">Ainda não tem login? Cadastre-se</a>
         <div id="mensagem"></div>
         <button type="button" id="logar">Entrar</button>
     </form>

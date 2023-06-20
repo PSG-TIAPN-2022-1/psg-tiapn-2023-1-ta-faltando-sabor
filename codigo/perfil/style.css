@@ -53,15 +53,18 @@ h1{
     color: rgba(0, 0, 0, .6);
 
 
+
 }
 
+
+
 .linkfavorito {
-    background-color: rgba(255, 242, 235, 0.8);
+    background-color: rgb(251, 251, 251);
     text-align: end;
     margin-left: 3em;
-    
     border: rgb(96, 31, 15,0.8)  solid 3px;
     border-radius: 1em;
+    margin-bottom: 1em;
 
 
 }
@@ -69,7 +72,7 @@ h1{
 
  .esquerda h2 {
     margin-right: 4.6em;
-    background-color: rgba(255, 242, 235, 0.8);
+    background-color: rgb(251, 250, 249);
     border:  rgb(96, 31, 15,0.8) 3px solid;
     margin-top: 0.3em;
     margin-bottom: 0.4em;
@@ -91,16 +94,20 @@ h1{
 
 button {
     text-align: center;
-    margin-top: 0.3em;
+    margin-top: 2em;
     margin-bottom: 0.3em;
-    border-radius: 10em;
-    background-color: rgba(255, 242, 235, 0.8);
-    border: rgb(96, 31, 15,0.8) 3px solid;
+    border-radius: 1.2em;
+    background-color: rgb(96, 31, 15);
+    border: rgb(250, 249, 248) 3px solid;
     padding-left: 2.5em;
     padding-right: 2.5em;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     margin-left: 3em;
 
+}
+
+h4{
+    color: aliceblue;
 }
 
