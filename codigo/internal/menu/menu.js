@@ -188,65 +188,112 @@ let carnesBovinas = [
   'Chuletão'
 ];
 
-const tabela = document.getElementById('tabela-dados');
-const dados = [
-  { nome: 'João', idade: 25, email: 'joao@example.com' },
-  { nome: 'Maria', idade: 30, email: 'maria@example.com' },
-  { nome: 'Pedro', idade: 28, email: 'pedro@example.com' },
-  { nome: 'Ana', idade: 32, email: 'ana@example.com' },
+let massas = [
+  'Espaguete',
+  'Macarrão Penne',
+  'Ravióli',
+  'Lasanha',
+  'Talharim',
+  'Fusilli',
+  'Farfalle',
+  'Macarrão Instantâneo',
+  'Canelone',
+  'Nhoque',
+  'Tagliatelle',
+  'Spätzle',
+  'Macarrão de Arroz',
+  'Linguine',
+  'Pappardelle'
 ];
 
-const tbody = tabela.querySelector('tbody');
+let carnesw = [
+  'Alcatra',
+  'Filé Mignon',
+  'Picanha',
+  'Coxão Duro',
+  'Contrafilé',
+  'Costela',
+  'Fraldinha',
+  'Maminha',
+  'Paleta',
+  'Patinho',
+  'Lagarto',
+  'Fígado',
+  'Cordeiro',
+  'Porco',
+  'Frango'
+];
 
-// Limpar conteúdo do <tbody>, caso necessário
-tbody.innerHTML = '';
+let frutaSelect;
+let verduraSelect;
+let legumesSelect;
+let carnesSelect;
+let massasSelect;
+let outrosSelect;
 
-// Percorrer o array de dados e gerar as linhas da tabela
-dados.forEach((item) => {
-  const row = tbody.insertRow();
-  const cellNome = row.insertCell();
-  const cellIdade = row.insertCell();
-  const cellEmail = row.insertCell();
-  const cellAcao = row.insertCell();
-  
-  cellNome.textContent = item.nome;
-  cellIdade.textContent = item.idade;
-  cellEmail.textContent = item.email;
-  
-  const button = document.createElement('button');
-  button.innerHTML = '<i class="fa fa-download"></i> Baixar';
-  button.addEventListener('click', () => {
-    // Criar o conteúdo do arquivo de texto
-    const content = `Nome: ${item.nome}\nIdade: ${item.idade}\nEmail: ${item.email}`;
-  
-    // Criar um elemento <a> temporário
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(new Blob([content], { type: 'text/plain' }));
-    link.download = 'dados.txt';
-  
-    // Adicionar o elemento <a> temporário ao documento
-    document.body.appendChild(link);
-  
-    // Simular o clique no link para iniciar o download
-    link.click();
-  
-    // Remover o elemento <a> temporário do documento
-    document.body.removeChild(link);
-  });
-  
-  cellAcao.appendChild(button);
-});
+  function atualizaTable(e){
+    const tabela = document.getElementById('tabela-dados');
+
+    
+    const tbody = tabela.querySelector('tbody');
+    
+    tbody.innerHTML = '';
+    
+    e.forEach((item) => {
+      const row = tbody.insertRow();
+      const cellNome = row.insertCell();
+      const cellIdade = row.insertCell();
+      const cellEmail = row.insertCell();
+      const cellAcao = row.insertCell();
+      
+      cellEmail.textContent = item.ingredientes;
+      cellNome.textContent = item.tituloReceita;
+      cellIdade.textContent = item.descricao;
+      const button = document.createElement('button');
+      button.innerHTML = '<i class="fa fa-download"></i> Baixar';
+      button.addEventListener('click', () => {
+        // Criar o conteúdo do arquivo de texto
+        const content = `Receita: ${item.tituloReceita}\nModo de preparo: ${item.modoPreparo}\nIngredientes: ${item.ingredientes}`;
+      
+        // Criar um elemento <a> temporário
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(new Blob([content], { type: 'text/plain' }));
+        link.download = 'receita.txt';
+      
+        // Adicionar o elemento <a> temporário ao documento
+        document.body.appendChild(link);
+      
+        // Simular o clique no link para iniciar o download
+        link.click();
+      
+        // Remover o elemento <a> temporário do documento
+        document.body.removeChild(link);
+      });
+      
+      cellAcao.appendChild(button);
+    });
+  }
+
+
 
   function buscarReceita(){
+    const btnDados = document.getElementById("divTable");
+    btnDados.style.display = "block"
+    const ingredientes = `${frutaSelect},${verduraSelect},${legumesSelect}`
 
-  axios.get('http://localhost:3000/api/receitas')
-  .then(response => {
-    const data = response.data;
-    console.log(data); // Dados da tabela "receita"
-  })
-  .catch(error => {
-    console.error(error);
-  });
+    axios.get(`http://localhost:3000/receitas?ingredientes=${ingredientes}`)
+      .then(response => {
+       let dade = response.data;
+       atualizaTable(dade);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
+  function limparReceita(){
+    const btnDados = document.getElementById("divTable");
+    btnDados.style.display = "none"
   }
 
   function filtrarFrutas() {
@@ -296,19 +343,13 @@ selectBtnoutros = wrapperlegume.querySelector(".select-btnoutros"),
 searchInpoutros = wrapperlegume.querySelector(".input1outros"),
 optionsOutros = wrapperlegume.querySelector(".optionsoutros");
 
-let frutaSelect;
-let verduraSelect;
-let legumesSelect;
-let carnesSelect;
-let massasSelect;
-let outrosSelect;
+
 
 function addFruta(selectedFruta) {
   options.innerHTML = "";
   frutas.forEach(fruta => {
       let isSelected = fruta == selectedFruta ? "selected" : "";
       let li = `<li onclick="updateFruta(this)" class="${isSelected}">${fruta}</li>`;
-      frutaSelect = fruta;
       options.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -316,6 +357,7 @@ addFruta();
 
 function updateFruta(selectedLi) {
   searchInp.value = "";
+  frutaSelect = selectedLi.innerText;
   addFruta(selectedLi.innerText);
   wrapper.classList.remove("active");
   selectBtn.firstElementChild.innerText = selectedLi.innerText;
@@ -341,7 +383,6 @@ function addverdura(selectedverdura) {
   verduras.forEach(verdura => {
       let isSelected = verdura == selectedverdura ? "selected" : "";
       let li = `<li onclick="updateVerdura(this)" class="${isSelected}">${verdura}</li>`;
-      verduraSelect = verdura;
       optionsverdura.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -349,6 +390,7 @@ addverdura();
 
 function updateVerdura(selectedLi) {
   searchInpverdura.value = "";
+  verduraSelect = selectedLi.innerText;
   addverdura(selectedLi.innerText);
   wrapperverdura.classList.remove("active");
   selectBtnverdura.firstElementChild.innerText = selectedLi.innerText;
@@ -373,7 +415,6 @@ function addLegume(selectedLegume) {
   legumes.forEach(legumes => {
       let isSelected = legumes == selectedLegume ? "selected" : "";
       let li = `<li onclick="updateLegume(this)" class="${isSelected}">${legumes}</li>`;
-      legumesSelect = legumes;
       optionslegume.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -381,6 +422,7 @@ addLegume();
 
 function updateLegume(selectedLi) {
   searchInplegume.value = "";
+  legumesSelect = selectedLi.innerText;
   addLegume(selectedLi.innerText);
   wrapperlegume.classList.remove("active");
   selectBtnlegume.firstElementChild.innerText = selectedLi.innerText;
@@ -402,10 +444,9 @@ selectBtnlegume.addEventListener("click", () => wrapperlegume.classList.toggle("
 
 function addCarnes(selectedCarnes) {
   optionscarnes.innerHTML = "";
-  legumes.forEach(carnes => {
+  carnesw.forEach(carnes => {
       let isSelected = carnes == selectedCarnes ? "selected" : "";
       let li = `<li onclick="updateCarnes(this)" class="${isSelected}">${carnes}</li>`;
-      carnesSelect = carnes;
       optionscarnes.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -413,6 +454,7 @@ addCarnes();
 
 function updateCarnes(selectedLi) {
   searchInpcarnes.value = "";
+  carnesSelect = selectedLi.innerText;
   addCarnes(selectedLi.innerText);
   wrappercarnes.classList.remove("active");
   selectBtncarnes.firstElementChild.innerText = selectedLi.innerText;
@@ -421,7 +463,7 @@ function updateCarnes(selectedLi) {
 searchInpcarnes.addEventListener("keyup", () => {
   let arr = [];
   let searchWord = searchInpcarnes.value.toLowerCase();
-  arr = legumes.filter(data => {
+  arr = carnesw.filter(data => {
       return data.toLowerCase().startsWith(searchWord);
   }).map(data => {
       let isSelected = data == selectBtncarnes.firstElementChild.innerText ? "selected" : "";
@@ -434,10 +476,9 @@ selectBtncarnes.addEventListener("click", () => wrappercarnes.classList.toggle("
 
 function addMassas(selectedMassas) {
   optionsmassas.innerHTML = "";
-  legumes.forEach(massas => {
+  massas.forEach(massas => {
       let isSelected = massas == selectedMassas ? "selected" : "";
       let li = `<li onclick="updateMassas(this)" class="${isSelected}">${massas}</li>`;
-      massasSelect = massas;
       optionsmassas.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -445,6 +486,7 @@ addMassas();
 
 function updateMassas(selectedLi) {
   searchInpmassas.value = "";
+  massasSelect = selectedLi.innerText;
   addMassas(selectedLi.innerText);
   wrappermassas.classList.remove("active");
   selectBtnmassas.firstElementChild.innerText = selectedLi.innerText;
@@ -453,7 +495,7 @@ function updateMassas(selectedLi) {
 searchInpmassas.addEventListener("keyup", () => {
   let arr = [];
   let searchWord = searchInpmassas.value.toLowerCase();
-  arr = legumes.filter(data => {
+  arr = massas.filter(data => {
       return data.toLowerCase().startsWith(searchWord);
   }).map(data => {
       let isSelected = data == selectBtnmassas.firstElementChild.innerText ? "selected" : "";
@@ -464,34 +506,3 @@ searchInpmassas.addEventListener("keyup", () => {
 
 selectBtnmassas.addEventListener("click", () => wrappermassas.classList.toggle("active"));
 
-function addOutros(selectedOutros) {
-  optionsOutros.innerHTML = "";
-  legumes.forEach(outros => {
-      let isSelected = outros == selectedOutros ? "selected" : "";
-      let li = `<li onclick="updatOutros(this)" class="${isSelected}">${outros}</li>`;
-      outrosSelect = outros;
-      optionsOutros.insertAdjacentHTML("beforeend", li);
-  });
-}
-addOutros();
-
-function updatOutros(selectedLi) {
-  searchInpoutros.value = "";
-  addOutros(selectedLi.innerText);
-  wrapperoutros.classList.remove("active");
-  selectBtnoutros.firstElementChild.innerText = selectedLi.innerText;
-}
-
-searchInpoutros.addEventListener("keyup", () => {
-  let arr = [];
-  let searchWord = searchInpoutros.value.toLowerCase();
-  arr = legumes.filter(data => {
-      return data.toLowerCase().startsWith(searchWord);
-  }).map(data => {
-      let isSelected = data == selectBtnoutros.firstElementChild.innerText ? "selected" : "";
-      return `<li onclick="updatOutros(this)" class="${isSelected}">${data}</li>`;
-  }).join("");
-  optionsmassas.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Não encontrado.</p>`;
-});
-
-selectBtnoutros.addEventListener("click", () => wrapperoutros.classList.toggle("active"));

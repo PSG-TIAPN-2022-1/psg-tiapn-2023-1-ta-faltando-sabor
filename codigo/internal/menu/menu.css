@@ -54,7 +54,7 @@
   }
   
   .line{
-    width: 150%;
+    width: 93%;
     background-color: #777777;
     height: 2px;
     top: 16px;
@@ -69,8 +69,8 @@
 
   .aling{
     position: relative;
-    right: 27%;
-    margin-top: 4%;
+    right: 8%;
+    margin-top: 3%;
   }
 
 *{
@@ -130,7 +130,7 @@ body{
 
 .div2{
   position: relative;
-  margin-top: 5%;
+  margin-top: 3%;
   display: flex;
 }
 .select-btn, li{
@@ -492,6 +492,8 @@ body{
 
 .div3{
   display:flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 
@@ -501,6 +503,8 @@ body{
 #tabela-dados {
   width: 100%;
   border-collapse: collapse;
+  max-height: 300px;
+  overflow: auto; 
 }
 
 #tabela-dados th {
@@ -519,4 +523,105 @@ body{
 
 #tabela-dados .nome {
   font-weight: bold;
+}
+
+.tabela-container {
+  max-height: 300px; 
+  overflow: auto; 
+  display: none;
+}
+
+.tabela-container table {
+  width: 100%;
+}
+
+.tabela-container th,
+.tabela-container td {
+  border: 1px solid #ddd;
+  padding: 8px; 
+}
+
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 30px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-31 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 30px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-31:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-31:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.tabela-container{
+
 }

@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "fofi3436",
+  password: "20042000",
   database: "mydb",
 });
 
@@ -154,14 +154,15 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/receitas', (req, res) => {
-  // Consulta SQL para obter os dados da tabela "receita"
-  const query = 'SELECT * FROM receita';
+  const ingredientes = req.query.ingredientes; 
 
-  // Executa a consulta no banco de dados
+  const query = `SELECT * FROM receita WHERE ingredientes LIKE '%${ingredientes}%'`;
+
+  
   connection.query(query, (error, results) => {
     if (error) {
       console.error(error);
-      res.status(500).json({ error: 'Erro ao obter os dados da tabela "receita"' });
+      res.status(500).json({ error: 'Erro ao buscar as receitas no banco de dados' });
     } else {
       res.json(results);
     }
