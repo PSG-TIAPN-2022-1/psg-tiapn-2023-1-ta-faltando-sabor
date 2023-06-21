@@ -135,6 +135,21 @@ app.post('/login', (req, res) => {
   });
 });
 
+app.get('/receitas', (req, res) => {
+  // Consulta SQL para obter os dados da tabela "receita"
+  const query = 'SELECT * FROM receita';
+
+  // Executa a consulta no banco de dados
+  connection.query(query, (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Erro ao obter os dados da tabela "receita"' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 
 
 app.listen(port, "0.0.0.0", () => {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/codigo/internal/menu/menu.css" />
     <title>Tela de Menu</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-rvqNh5HnRhxARZV1D42ZAsJw1xSx6o3AB8tvz7FvQ8hutOnPM6IO9cP8YmVQ35MgLsgcxjHuQf2cXdSR1EKMxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
   <body>
@@ -19,75 +21,136 @@
       </div>
     </nav>
 
-    <div class="aling">
-      <div class="div1">
-        <span>Selecione os ingredientes para a receita:</span>
+    <div>
+      <div class="aling">
+        <div class="div1">
+          <span>Selecione os ingredientes para a receita:</span>
+        </div>
+  
+        <div class="line"></div>
+  
+        <div class="div2">
+  
+          <div >
+            <label>Filtrar por fruta:</label>
+            <div class="wrapper">
+              <div class="select-btn">
+                <span>Selecione uma fruta</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input class="input1" spellcheck="false"  type="text" placeholder="Pesquisar">
+                </div>
+                <ul class="options"></ul>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div >
+            <label>Filtrar por verdura:</label>
+            <div class="wrapperverdura">
+              <div class="select-btnverdura">
+                <span>Selecione uma verdura</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input class="input1verdura" spellcheck="false"  type="text" placeholder="Pesquisar">
+                </div>
+                <ul class="optionsverdura"></ul>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div >
+            <label>Filtrar por legume:</label>
+            <div class="wrapperlegume">
+              <div class="select-btnlegume">
+                <span>Selecione um legume</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input class="input1legume" spellcheck="false"  type="text" placeholder="Pesquisar">
+                </div>
+                <ul class="optionslegume"></ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+  
+        <div class="div3">
+  
+          <div >
+            <label>Filtrar por carnes:</label>
+            <div class="wrappercarnes">
+              <div class="select-btncarnes">
+                <span>Selecione uma carne</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input class="input1carnes" spellcheck="false"  type="text" placeholder="Pesquisar">
+                </div>
+                <ul class="optionscarnes"></ul>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div >
+            <label>Filtrar por massas:</label>
+            <div class="wrappermassas">
+              <div class="select-btnmassas">
+                <span>Selecione uma massa</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input class="input1massas" spellcheck="false"  type="text" placeholder="Pesquisar">
+                </div>
+                <ul class="optionsmassas"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button onclick="buscarReceita()"> Buscar</button>
+          </div>
+  
+        </div>
+       
+      </div>
+  
+  
+      <div>
+        <table id="tabela-dados">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+  
+          </tbody>
+        </table>
       </div>
 
-      <div class="line"></div>
-
-      <div class="div2">
-
-        <div >
-          <label>Filtrar por fruta:</label>
-          <div class="wrapper">
-            <div class="select-btn">
-              <span>Selecione uma fruta</span>
-              <i class="uil uil-angle-down"></i>
-            </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input class="input1" spellcheck="false"  type="text" placeholder="Pesquisar">
-              </div>
-              <ul class="options"></ul>
-            </div>
-          </div>
-        </div>
-
-
-        <div >
-          <label>Filtrar por verdura:</label>
-          <div class="wrapperverdura">
-            <div class="select-btnverdura">
-              <span>Selecione uma verdura</span>
-              <i class="uil uil-angle-down"></i>
-            </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input class="input1verdura" spellcheck="false"  type="text" placeholder="Pesquisar">
-              </div>
-              <ul class="optionsverdura"></ul>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- <div >
-          <label>Filtrar por legume:</label>
-          <div class="wrapperlegume">
-            <div class="select-btnlegume">
-              <span>Selecione um legume</span>
-              <i class="uil uil-angle-down"></i>
-            </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input class="input1legume" spellcheck="false"  type="text" placeholder="Pesquisar">
-              </div>
-              <ul class="optionslegume"></ul>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-
-     
     </div>
 
 
-   
 
     <div class="footer">
       <p>© Copyright 2023 - Todos os direitos reservados - Ta faltando sabor</p>
