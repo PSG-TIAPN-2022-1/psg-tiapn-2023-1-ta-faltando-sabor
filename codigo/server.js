@@ -131,7 +131,25 @@ app.post('/login', (req, res) => {
       return res.status(401).json({ message: 'Erro! Senha inválida!' });
     }
 
-    res.json({ message: 'Login realizado com sucesso!' });
+    const mailOptions = {
+      from: "diego56bola@hotmail.com",
+      to: email,
+      subject: "Login",
+      text: "Alerta de Login!",
+    };
+
+    // Envio do e-mail
+    transport.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(500).send("Erro ao enviar o e-mail.");
+      } else {
+        console.log("E-mail enviado: " + info.response);
+        return res.status(200).json({ message: "Login realizado com sucesso!" });
+      }
+    });
+
+    
   });
 });
 
